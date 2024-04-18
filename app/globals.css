@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideToTop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes extendVertically {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes collapseVertically {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
+
+/* EXCLUSIVELY FOR CONTACT PAGE FORM */
+
+@keyframes slideUpwards {
+  from {
+    top: 4px;
+  }
+  to {
+    top: -20px;
+  }
+}
+
+@keyframes slideDownwards {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 4px;
+  }
+}
+
+/* // */
+
+@keyframes moveRightToLeft {
+  50% {
+    transform: translateX(25px);
+  }
+  50.1% {
+    transform: translateX(-50px);
+  }
+}
+
+/* SB STANDS FOR SLIDER BUTTON */
+
+@keyframes moveRightToLeftSB {
+  50% {
+    transform: translate(50px, -50%);
+  }
+  50.1% {
+    transform: translate(-50px, -50%);
+  }
+}
+
+@keyframes moveLeftToRightSB {
+  50.001% {
+    transform: translate(50px, -50%);
+  }
+  50% {
+    transform: translate(-50px, -50%);
+  }
+}
