@@ -1,14 +1,18 @@
 import HeaderCarousel from "./headerCarousel";
 import HeaderNavbar from "./headerNavbar";
 import HeaderImage from "./headerImage";
+import { SSRMobileDetection } from "@/utils/ssrDeviceDetection";
 
-export default function Header() {
+export default async function Header() {
+  const isMobile = await SSRMobileDetection();
   const MAIN_TEXT = "Dbamy o finanse Twojej firmy.";
   const SUB_TEXT = "Wszystko w jednym miejscu";
   return (
     <header
       id='header'
-      className={`w-full h-[65vh] md:h-[88.5vh] bg-gradient1 relative flex flex-col overflow-hidden justify-between  items-baseline  text-white `}
+      className={`w-full h-[65vh] md:h-[88.5vh] ${
+        !isMobile && "bg-gradient1"
+      }  relative flex flex-col overflow-hidden justify-between  items-baseline  text-white `}
     >
       <HeaderImage />
       <HeaderNavbar />
