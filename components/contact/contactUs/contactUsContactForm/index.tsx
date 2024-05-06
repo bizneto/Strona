@@ -99,13 +99,13 @@ export default function ContactUsContactForm() {
       return;
     }
 
-    // await fetch("/api/email", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     dataToSend,
-    //     inputsData,
-    //   }),
-    // });
+    await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify({
+        dataToSend,
+        inputsData,
+      }),
+    });
 
     setIsPopUpVisible(true);
     setSelectedOptions([]);
