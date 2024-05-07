@@ -1,12 +1,12 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import { useRef } from "react";
 import QuestionsMap from "./questionsMap";
 import useSectionVisibility from "@/utils/intersectionObserver";
 
 export default function FAQ() {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
 

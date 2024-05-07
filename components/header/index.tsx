@@ -1,6 +1,7 @@
 import HeaderCarousel from "./headerCarousel";
 import HeaderNavbar from "./headerNavbar";
 import HeaderImage from "./headerImage";
+import HeaderDesktopMenu from "./headerDesktopMenu";
 
 export default function Header() {
   const MAIN_TEXT = "Dbamy o finanse Twojej firmy.";
@@ -11,7 +12,10 @@ export default function Header() {
       className={`w-full h-[65vh] md:h-[88.5vh] bg-gradient1 relative flex flex-col overflow-hidden justify-between  items-baseline  text-white `}
     >
       <HeaderImage />
-      <HeaderNavbar />
+      <span className='w-full'>
+        <HeaderNavbar />
+        <HeaderDesktopMenu />
+      </span>
       <div className={`w-full flex flex-col mb-[3%]`}>
         <div
           className={`mx-auto w-10/12 md:w-[89%] 2xl:w-[1440px]  flex flex-col`}

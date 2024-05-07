@@ -41,8 +41,8 @@ export default function GlobalContextProvider({
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktopMenuVisible, setIsDesktopMenuVisible] = useState({
-    isVisible: true,
-    selectedOption: "",
+    isVisible: false,
+    selectedOption: "O nas",
   });
 
   async function detectMobileDevice() {

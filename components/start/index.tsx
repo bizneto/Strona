@@ -3,10 +3,10 @@
 import ButtonWithArrow from "../buttonWithArrow";
 import { useRef } from "react";
 import useSectionVisibility from "@/utils/intersectionObserver";
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 
 export default function Start() {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
 

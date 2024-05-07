@@ -1,6 +1,6 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import Image from "next/image";
 import { useState } from "react";
 import { useSwiper } from "swiper/react";
@@ -62,7 +62,7 @@ function ArrowWithCircle({
 }
 
 export default function SliderButtons({ dataArrLength }: SliderButtonsProps) {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const [activeIndex, setActiveIndex] = useState(0);
   const swiper = useSwiper();
 

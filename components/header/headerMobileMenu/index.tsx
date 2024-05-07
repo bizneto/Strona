@@ -1,6 +1,6 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
@@ -16,9 +16,8 @@ export interface IMobileMenu {
 }
 
 export default function MobileMenu() {
-  const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileData();
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useGlobalContext();
   const [selectedLanguage, setSelectedLanguage] = useState("PL");
-
   const [subPageData, setSubPageData] = useState({
     isVisible: false,
     routeOption: "",
@@ -34,20 +33,20 @@ export default function MobileMenu() {
     };
   }, [isMobileMenuOpen]);
 
-  // const NAVBAR_ROUTES = ["O nas", "Oferta", "Klienci", "Produkty"];
-  // const LANGUAGES = ["PL", "EN"];
+  const NAVBAR_ROUTES = ["O nas", "Oferta", "Klienci", "Produkty"];
+  const LANGUAGES = ["PL", "EN"];
   const CONTACT_BTTN = "Kontakt";
 
-  // const MobileMenuSubPage = dynamic(() => import("./headerMobileMenuSubPage"));
+  const MobileMenuSubPage = dynamic(() => import("./headerMobileMenuSubPage"));
 
   return (
     <>
-      {/* {subPageData.isVisible && (
+      {subPageData.isVisible && (
         <MobileMenuSubPage
           setSubPageData={setSubPageData}
           subPageData={subPageData}
         />
-      )} */}
+      )}
       <div
         className={`absolute overflow-hidden transition-all duration-700 w-screen z-10 left-0 bg-white ${
           isMobileMenuOpen
@@ -59,7 +58,7 @@ export default function MobileMenu() {
           <span className='w-full mb-4  mx-auto flex justify-between items-center h-[69px]'>
             <HeaderNavbar />
           </span>
-          {/* {NAVBAR_ROUTES?.map((route) => (
+          {NAVBAR_ROUTES?.map((route) => (
             <span
               onClick={() =>
                 setSubPageData({ isVisible: true, routeOption: route })
@@ -74,11 +73,11 @@ export default function MobileMenu() {
                 </Link>
               </span>
             </span>
-          ))} */}
+          ))}
           <div className='absolute w-full bottom-8'>
             <span className='w-10/12 mx-auto flex flex-col justify-start font-medium gap-4'>
               <span className='flex gap-2'>
-                {/* {LANGUAGES.reverse().map((language) => (
+                {LANGUAGES.reverse().map((language) => (
                   <div key={language} className='relative'>
                     <button
                       key={language}
@@ -95,7 +94,7 @@ export default function MobileMenu() {
                       } absolute bottom-0 left-0  h-[2px] w-full `}
                     />
                   </div>
-                ))} */}
+                ))}
               </span>
               <Link
                 href={"/kontakt"}

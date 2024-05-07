@@ -5,11 +5,12 @@ import logo from "@/public/svgs/biznetoLogo.svg";
 import darkLogo from "@/public/svgs/biznetoLogoBlack.svg";
 import logoMobile from "@/public/svgs/biznetoLogoMobile.svg";
 import darkLogoMobile from "@/public/svgs/biznetoLogoMobileDark.svg";
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import Link from "next/link";
 
 export default function HeaderNavbarImage() {
-  const { isMobile, isMobileMenuOpen } = useMobileData();
+  const { isMobile, isMobileMenuOpen, isDesktopMenuVisible } =
+    useGlobalContext();
 
   return (
     <Link href={"/"}>
@@ -19,7 +20,7 @@ export default function HeaderNavbarImage() {
             ? isMobileMenuOpen
               ? darkLogoMobile
               : logoMobile
-            : isMobileMenuOpen
+            : isDesktopMenuVisible.isVisible
             ? darkLogo
             : logo
         }

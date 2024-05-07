@@ -1,6 +1,6 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import { DesktopSlider } from "@/components/desktopSlider";
 import { A11y, FreeMode, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ import { useRef } from "react";
 import useSectionVisibility from "@/utils/intersectionObserver";
 
 export default function Blog() {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
 

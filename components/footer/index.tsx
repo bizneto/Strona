@@ -4,7 +4,7 @@ import logo from "@/public/svgs/biznetoLogo.svg";
 import fbLogo from "@/public/svgs/fbLogo.svg";
 import igLogo from "@/public/svgs/igLogo.svg";
 import ttLogo from "@/public/svgs/ttLogo.svg";
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 
 export default function Footer() {
   const WORKING_HOURS_STR = "Godziny otwarcia:";
@@ -73,7 +73,7 @@ export default function Footer() {
     "REGON: 381513359",
     "KRS: 0000752177",
   ];
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
 
   return (
     <div className='w-full h-full bg-black text-white overflow-hidden'>

@@ -1,10 +1,10 @@
 "use client";
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { PropsWithChildren } from "react";
 
 export default function SmoothScrolling({ children }: PropsWithChildren) {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
 
   return (
     <>

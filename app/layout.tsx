@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import MobileDataProvider from "@/context/mobileDataProvider";
 import Scroll from "@/utils/SmoothScrollbar";
 import Footer from "@/components/footer";
 import "./globals.css";
 import MobileMenu from "@/components/header/headerMobileMenu";
+import GlobalContextProvider from "@/context/globalContextProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -22,13 +22,13 @@ export default function RootLayout({
   return (
     <html lang='pl'>
       <body id='body' className={montserrat.className}>
-        <MobileDataProvider>
+        <GlobalContextProvider>
           <Scroll>
             <MobileMenu />
             {children}
             <Footer />
           </Scroll>
-        </MobileDataProvider>
+        </GlobalContextProvider>
       </body>
     </html>
   );

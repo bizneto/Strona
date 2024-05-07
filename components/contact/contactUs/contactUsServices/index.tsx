@@ -79,8 +79,6 @@ export default function ContactUsServices() {
     }
   }
 
-  console.log(isError);
-
   return (
     <div className='pt-8 md:py-2 md:w-full lg:w-full'>
       <div className='flex flex-col gap-6 overflow-hidden'>

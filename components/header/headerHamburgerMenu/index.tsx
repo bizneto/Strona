@@ -1,10 +1,10 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import "./index.css";
 
 export default function HamburgerMenu() {
-  const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileData();
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useGlobalContext();
 
   return (
     <div

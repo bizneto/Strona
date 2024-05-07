@@ -1,6 +1,6 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Scrollbar } from "swiper/modules";
 import "swiper/css";
@@ -15,7 +15,7 @@ import useSectionVisibility from "@/utils/intersectionObserver";
 export default function WhoWeServe() {
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
 
   const SECTION_TITLE = "Oferta";
   const HEADER_TEXT = "Kogo obsługujemy?";

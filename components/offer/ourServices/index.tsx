@@ -1,12 +1,12 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import OfferSegment from "../offerSegment";
 import { useRef } from "react";
 import useSectionVisibility from "@/utils/intersectionObserver";
 
 export default function OurServices() {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
 

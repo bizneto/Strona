@@ -1,11 +1,11 @@
 "use client";
 
-import useMobileData from "@/hooks/useMobileData";
+import useGlobalContext from "@/hooks/useGlobalContext";
 import useSectionVisibility from "@/utils/intersectionObserver";
 import { useEffect, useRef, useState } from "react";
 
 export default function Mission() {
-  const { isMobile } = useMobileData();
+  const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
   const [animationTriggered, setAnimationTriggered] = useState(false);
