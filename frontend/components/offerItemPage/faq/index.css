@@ -1,0 +1,44 @@
+#button {
+  color: #ecf0f1;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  font-size: 1.5em;
+  position: relative;
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+#button span {
+  position: absolute;
+  transition: transform 300ms;
+  background: white;
+  border-radius: 2px;
+}
+
+#button span:first-child {
+  top: 50%;
+  left: 50%;
+  width: 10%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+#button span:last-child {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#button.--active span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#button.--active span:last-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}

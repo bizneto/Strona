@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_pages",
+  "info": {
+    "singularName": "article-page",
+    "pluralName": "article-pages",
+    "displayName": "ArticlePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page": {
+      "type": "dynamiczone",
+      "components": [
+        "blog-components.admission",
+        "blog-components.article",
+        "blog-components.header",
+        "blog-components.thumbnail"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.swiper-box {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    margin-left: 1.8rem;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 1rem;
+  }
+}

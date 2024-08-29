@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "chatbot_finances",
+  "info": {
+    "singularName": "chatbot-finance",
+    "pluralName": "chatbot-finances",
+    "displayName": "ChatbotFinance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chatBotInstruction": {
+      "type": "text"
+    },
+    "chatbotFiles": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

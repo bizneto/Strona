@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_item_pages",
+  "info": {
+    "singularName": "offer-item-page",
+    "pluralName": "offer-item-pages",
+    "displayName": "OfferItemPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Projekt": {
+      "type": "component",
+      "repeatable": false,
+      "component": "offer-item-components.projekt"
+    },
+    "Slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "offer-item-components.slider"
+    },
+    "Offer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "offer-item-components.offer-item"
+    },
+    "Value": {
+      "type": "component",
+      "repeatable": false,
+      "component": "offer-item-components.value"
+    },
+    "Process": {
+      "type": "component",
+      "repeatable": true,
+      "component": "offer-item-components.proces-item",
+      "max": 4
+    },
+    "FAQ": {
+      "type": "component",
+      "repeatable": true,
+      "component": "offer-item-components.question-item"
+    },
+    "OfferItem": {
+      "type": "string"
+    }
+  }
+}

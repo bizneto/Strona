@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_component_big_images",
+  "info": {
+    "displayName": "BigImage",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

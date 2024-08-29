@@ -1,0 +1,20 @@
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: #ff3c50;
+  border: none;
+  background-image: url("../../../../public/svgs/checkboxVector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

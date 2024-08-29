@@ -1,0 +1,8 @@
+.swiper-box-article {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  margin-left: 2.5rem;
+}

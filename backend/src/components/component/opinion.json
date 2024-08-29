@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_component_opinions",
+  "info": {
+    "displayName": "Opinion",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "opinionAuthor": {
+      "type": "string"
+    },
+    "opinionAuthorPostion": {
+      "type": "string"
+    },
+    "opinion": {
+      "type": "text"
+    }
+  }
+}

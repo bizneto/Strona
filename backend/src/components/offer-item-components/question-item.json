@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_offer_item_components_question_items",
+  "info": {
+    "displayName": "QuestionItem",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Answer": {
+      "type": "text"
+    }
+  }
+}

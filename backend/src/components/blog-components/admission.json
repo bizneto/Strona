@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blog_components_admissions",
+  "info": {
+    "displayName": "Admission",
+    "icon": "discuss",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

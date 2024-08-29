@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_offer_item_components_proces_items",
+  "info": {
+    "displayName": "ProcessItem",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}

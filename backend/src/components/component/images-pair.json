@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_component_images_pairs",
+  "info": {
+    "displayName": "ImagesPair",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "imagesPair": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

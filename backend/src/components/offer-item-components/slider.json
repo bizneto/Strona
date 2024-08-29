@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_offer_item_components_sliders",
+  "info": {
+    "displayName": "Slider",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

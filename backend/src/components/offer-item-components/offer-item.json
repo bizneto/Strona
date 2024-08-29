@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_offer_item_components_offer_items",
+  "info": {
+    "displayName": "OfferItem",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    }
+  }
+}

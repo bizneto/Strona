@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversation_digitals",
+  "info": {
+    "singularName": "conversation-digital",
+    "pluralName": "conversation-digitals",
+    "displayName": "ConversationDigital"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "text"
+    },
+    "clientEmail": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "messages": {
+      "type": "json"
+    },
+    "clientID": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_offer_item_components_projekts",
+  "info": {
+    "displayName": "Projekt",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "unique": false
+    },
+    "Subtitle": {
+      "type": "string"
+    }
+  }
+}

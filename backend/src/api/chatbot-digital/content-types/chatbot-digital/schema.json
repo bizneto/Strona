@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "chatbot_digitals",
+  "info": {
+    "singularName": "chatbot-digital",
+    "pluralName": "chatbot-digitals",
+    "displayName": "chatbotDigital",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chatBotInstruction": {
+      "type": "text"
+    },
+    "chatbotFiles": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

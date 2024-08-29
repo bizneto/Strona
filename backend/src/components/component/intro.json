@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_intros",
+  "info": {
+    "displayName": "Intro",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "longText": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_component_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "arrowUp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "services": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "string"
+    }
+  }
+}

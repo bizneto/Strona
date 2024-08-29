@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_component_goals",
+  "info": {
+    "displayName": "Goal",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "longText": {
+      "type": "text"
+    }
+  }
+}

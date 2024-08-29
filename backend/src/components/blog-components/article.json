@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blog_components_articles",
+  "info": {
+    "displayName": "Article",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "articleAdmission": {
+      "type": "text"
+    },
+    "articleHeader": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "articleMain": {
+      "type": "blocks"
+    }
+  }
+}

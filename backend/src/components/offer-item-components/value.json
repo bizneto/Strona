@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_offer_item_components_values",
+  "info": {
+    "displayName": "Value",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}

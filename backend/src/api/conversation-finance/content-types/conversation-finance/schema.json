@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversation_finances",
+  "info": {
+    "singularName": "conversation-finance",
+    "pluralName": "conversation-finances",
+    "displayName": "ConversationFinance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "string"
+    },
+    "clientEmail": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "messages": {
+      "type": "json"
+    },
+    "clientID": {
+      "type": "biginteger"
+    }
+  }
+}

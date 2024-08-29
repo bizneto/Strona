@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_component_thumbnails",
+  "info": {
+    "displayName": "Thumbnail",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

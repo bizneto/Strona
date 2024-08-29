@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_pages",
+  "info": {
+    "singularName": "case-study-page",
+    "pluralName": "case-study-pages",
+    "displayName": "CaseStudy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page": {
+      "type": "dynamiczone",
+      "components": [
+        "component.big-image",
+        "component.goal",
+        "component.header",
+        "component.images-pair",
+        "component.intro",
+        "component.opinion",
+        "component.small-image",
+        "component.thumbnail",
+        "component.mini-thumbnail"
+      ]
+    }
+  }
+}
