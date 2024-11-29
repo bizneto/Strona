@@ -13,7 +13,7 @@ export default function HamburgerMenu({ color }: IHamburgerMenu) {
   return (
     <div
       id='nav-icon1'
-      className={isMobileMenuOpen ? `open ${color}` : `${color}`}
+      className={`${isMobileMenuOpen ? `open ${color}` : `${color}`} md:hidden`}
       onClick={() => setIsMobileMenuOpen!((curr) => !curr)}
     >
       <span />

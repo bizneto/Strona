@@ -5,7 +5,7 @@ import useGlobalContext from "@/hooks/useGlobalContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HEADER, SECTION_TITLE } from "../data";
 import { Scrollbar } from "swiper/modules";
-import { IProces, SectionFooter } from "..";
+import { IProcess, SectionFooter } from "..";
 import { useState } from "react";
 import Image from "next/image";
 import "swiper/css/scrollbar";
@@ -13,7 +13,7 @@ import "./index.css";
 import "swiper/css";
 import { imageUrl } from "@/shared";
 
-export default function ProcessMobile({ Process }: IProces) {
+export default function ProcessMobile({ Process }: IProcess) {
   const { isMobile } = useGlobalContext();
   const [activeIndex, setActiveIndex] = useState(0);
 

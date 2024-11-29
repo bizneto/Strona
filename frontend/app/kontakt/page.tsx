@@ -1,7 +1,7 @@
-import Footer from "@/components/financePage/footer";
 import ContactUs from "@/components/contactPage/contactUs";
 import EmbededMap from "@/components/contactPage/embededMap";
 import Header from "@/components/contactPage/header";
+import FooterAlt from "@/components/shared/footerAlt";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <Header />
       <ContactUs />
       <EmbededMap />
-      <Footer />
+      <FooterAlt />
     </>
   );
 }

@@ -13,6 +13,9 @@ interface IFAQ {
 
 export default function FAQ({ FAQ }: IFAQ) {
   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
+
+  if (!FAQ) return null;
+
   const SECTION_TITLE = "FAQ";
   const HEADER = "Pytania?";
   const HEADER_SUBTEXT = "Oto kilka odpowiedzi";
@@ -46,13 +49,9 @@ export default function FAQ({ FAQ }: IFAQ) {
                 <div
                   onClick={() => setSelectedQuestion(isSelected ? null : index)}
                   key={index}
-                  className={`w-[97%] ${
-                    isSelected
-                      ? "h-[120px] md:h-[138px] gap-4"
-                      : "h-[60px] md:h-[90px] overflow-hidden gap-0"
-                  } mx-auto flex flex-col justify-center border-b-[#8B8B8B] border-b-[1px] transition-all duration-700`}
+                  className={`w-[97%]  mx-auto flex flex-col justify-center border-b-[#8B8B8B] border-b-[1px] transition-all duration-700`}
                 >
-                  <div className='flex items-center gap-6 h-[28px] overflow-hidden'>
+                  <div className='py-2 flex justify-between items-center overflow-hidden'>
                     <button
                       id='button'
                       className={`${isSelected ? "--active" : ""}`}
@@ -60,19 +59,22 @@ export default function FAQ({ FAQ }: IFAQ) {
                       <span></span>
                       <span></span>
                     </button>
-                    <p className='text-[20px] leading-[28px]'>{Question}</p>
+                    <p className='py-2 w-[90%] h-fit text-[20px] leading-[28px]'>
+                      {Question}
+                    </p>
                   </div>
+
                   <div
-                    className={`overflow-hidden flex flex-col transition-all duration-700 ease-in-out ${
+                    className={`text-ellipsis overflow-hidden flex flex-col transition-all duration-700 ease-in-out ${
                       isSelected
-                        ? "max-h-[40px] opacity-100 visible"
+                        ? "max-h-[140px] md:max-h-[140px] h-fit opacity-100 visible pb-2"
                         : "max-h-[0px] opacity-0 invisible"
                     }`}
                   >
                     <p
                       className={`${
                         isSelected
-                          ? "h-fit py-4"
+                          ? "max-h-[260px] h-fit py-2 md:py-0"
                           : "h-0 overflow-hidden opacity-0"
                       } transition-all duration-700 ease-in-out text-[16px] leading-[22.4px]`}
                     >

@@ -1,5 +1,4 @@
 "use server";
-
 import "server-only";
 import { getClientID, setClientID } from "./cookies";
 
@@ -11,8 +10,8 @@ export interface Message {
 type TPage = "digital" | "finance";
 
 class Strapi {
-  private static instances: Map<TPage, Strapi> = new Map();
-  private static initialized: Map<TPage, boolean> = new Map();
+  private static instances: Map<string, Strapi> = new Map();
+  private static initialized: Map<string, boolean> = new Map();
 
   apiKey: string | undefined;
   id!: number;
@@ -24,25 +23,14 @@ class Strapi {
     Authorization: string;
   };
 
-  private constructor(page: TPage) {
-    this.initialize(page);
+  private constructor(private page: TPage, private clientID: number) {
+    this.initialize();
   }
 
-  private async initialize(page: TPage) {
-    const storedId = await getClientID(page);
-    this.id = storedId
-      ? parseInt(storedId)
-      : Math.floor(Math.random() * 1000000);
-
-    if (!storedId) {
-      await setClientID(this.id, page);
-    }
-
+  private async initialize() {
     this.apiKey = process.env.STRAPI_KEY;
-    // this.urlPrefix = "http://127.0.0.1:1337/api";
     this.urlPrefix = "http://bizneto.programero.pl/api";
-    this.conversationsUrl = `${this.urlPrefix}/conversation-${page + "s"}`;
-    this.chatbotUrl = `${this.urlPrefix}/chatbot-${page}`;
+    this.conversationsUrl = `${this.urlPrefix}/conversation-${this.page + "s"}`;
     this.headers = {
       "Content-type": "application/json",
       Authorization: `Bearer ${this.apiKey}`,
@@ -50,19 +38,26 @@ class Strapi {
   }
 
   public static async getInstance(page: TPage): Promise<Strapi> {
-    if (!Strapi.instances.has(page) || !Strapi.initialized.get(page)) {
-      const instance = new Strapi(page);
-      await instance.initialize(page);
-      Strapi.instances.set(page, instance);
-      Strapi.initialized.set(page, true);
-    } else {
-      const instance = Strapi.instances.get(page)!;
-      instance.conversationsUrl = `${instance.urlPrefix}/conversation-${
-        page + "s"
-      }`;
-      instance.chatbotUrl = `${instance.urlPrefix}/chatbot-${page}`;
+    const storedId = await getClientID(page);
+    const clientID = storedId
+      ? parseInt(storedId)
+      : Math.floor(Math.random() * 1000000);
+
+    // Set clientID if not stored
+    if (!storedId) {
+      await setClientID(clientID, page);
     }
-    return Strapi.instances.get(page)!;
+
+    const key = `${page}-${clientID}`;
+
+    if (!Strapi.instances.has(key) || !Strapi.initialized.get(key)) {
+      const instance = new Strapi(page, clientID);
+      await instance.initialize();
+      Strapi.instances.set(key, instance);
+      Strapi.initialized.set(key, true);
+    }
+
+    return Strapi.instances.get(key)!;
   }
 
   createConversation(messages: { role: string; content: string }[]) {
@@ -71,8 +66,8 @@ class Strapi {
         clientName: "Klient",
         timestamp: new Date().toISOString(),
         messages,
-        clientID: this.id,
-        link: { id: this.id },
+        clientID: this.clientID,
+        link: { id: this.clientID },
       },
     };
   }
@@ -81,7 +76,7 @@ class Strapi {
     let conversationHistory = null;
     try {
       const response = await fetch(
-        `${this.conversationsUrl}?filters[clientID][$eq]=${this.id}`,
+        `${this.conversationsUrl}?filters[clientID][$eq]=${this.clientID}`,
         {
           method: "GET",
           headers: this.headers,
@@ -107,7 +102,7 @@ class Strapi {
     let id: number | null = null;
     try {
       const response = await fetch(
-        `${this.conversationsUrl}?filters[clientID][$eq]=${this.id}`,
+        `${this.conversationsUrl}?filters[clientID][$eq]=${this.clientID}`,
         {
           method: "GET",
           headers: this.headers,
@@ -162,9 +157,11 @@ class Strapi {
     return response.json();
   }
 
-  async getInstructions() {
+  async getInstructions(page: "finance" | "digital") {
+    const chatbotUrl = `${this.urlPrefix}/chatbot-${page}`;
+
     try {
-      const response = await fetch(this.chatbotUrl, {
+      const response = await fetch(chatbotUrl, {
         method: "GET",
         headers: this.headers,
       });

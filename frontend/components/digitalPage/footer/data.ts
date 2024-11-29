@@ -10,7 +10,7 @@ export const NAVIGATION_DATA = {
   Nawigacja: [
     {
       label: "Home",
-      route: "/",
+      route: "/digital",
     },
     {
       label: "Branding",

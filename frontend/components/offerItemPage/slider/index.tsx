@@ -32,7 +32,8 @@ interface SliderProps {
 }
 
 export default function Slider({ Slider }: SliderProps) {
-  if (!Slider?.images?.data) return;
+  if (!Slider?.images?.data || !Slider) return null;
+
   const imagesArr = Slider?.images?.data || [];
 
   return (
@@ -48,18 +49,23 @@ export default function Slider({ Slider }: SliderProps) {
           modules={[Pagination, Mousewheel, Autoplay]}
           className='mySwiper-1'
         >
-          {imagesArr.map(({ attributes: { url, width, height } }, index) => (
-            <SwiperSlide key={index}>
-              <Image
-                priority
-                className='rounded-lg'
-                width={width}
-                height={height}
-                src={imageUrl(url)}
-                alt={`slider image ${index}`}
-              />
-            </SwiperSlide>
-          ))}
+          {imagesArr.map(
+            (
+              { attributes: { url = "", width = 0, height = 0 } = {} },
+              index
+            ) => (
+              <SwiperSlide key={index}>
+                <Image
+                  priority
+                  className='rounded-lg'
+                  width={width}
+                  height={height}
+                  src={imageUrl(url)}
+                  alt={`slider image ${index}`}
+                />
+              </SwiperSlide>
+            )
+          )}
           <div className='swiper-pagination'></div>
         </Swiper>
       </div>

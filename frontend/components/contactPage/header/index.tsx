@@ -3,7 +3,6 @@ import mobileHeader from "@/public/images/contactMobileHeader.png";
 import desktopHeaderBackground from "@/public/images/contactDesktopBackground.webp";
 import HeaderNavbar from "@/components/financePage/header/headerNavbar";
 import { SSRMobileDetection } from "@/utils/ssrDeviceDetection";
-import HeaderDesktopMenu from "@/components/financePage/header/headerDesktopMenu";
 
 export default async function Header() {
   const isMobile = await SSRMobileDetection();

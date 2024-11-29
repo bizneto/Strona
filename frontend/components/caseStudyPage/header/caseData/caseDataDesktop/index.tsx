@@ -2,7 +2,7 @@ import { IPassedData } from "..";
 
 export default function CaseDataDesktop({ data }: IPassedData) {
   return (
-    <div className='hidden md:flex justify-between items-center  max-h-[67px] '>
+    <div className='hidden lg:flex justify-between items-center  max-h-[67px] '>
       {Object.entries(data).map(([label, value], index) => (
         <span key={index} className='flex flex-col gap-3 max-h-[67px]'>
           <p className='text-[14px] leading-[19.6px] text-[#505050]'>{label}</p>
@@ -10,7 +10,7 @@ export default function CaseDataDesktop({ data }: IPassedData) {
             {Array.isArray(value) ? (
               value.map((el) => (
                 <span
-                  className='px-6 py-[10px] rounded-[100px] border-[1.2px] border-black'
+                  className='xl:px-6 lg:px-3 py-[10px] rounded-[100px] border-[1.2px] border-black'
                   key={el}
                 >
                   {el}

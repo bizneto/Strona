@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ButtonWithArrowTypeSumbit } from "@/components/shared/buttonWithArrow";
 import { CONTACT_FORM_DATA, CONTACT_INFO } from "./data";
 import {
+  BUTTON_TEXT,
   CHECKBOX_LABEL,
   ERROR_COMPONENT,
   FORM_ROW,
@@ -30,18 +31,21 @@ export default function ContactForm() {
   const [formState, action] = useFormState(sendEmail, null);
 
   function handleOptionClick(option: string) {
-    selectedOptions.forEach((el) => {
-      if (CONTACT_FORM_DATA.budget.data.includes(el)) {
-        setSelectedOptions((prevState) =>
-          prevState.filter((opt) => opt !== el)
+    const isBudgetOption = CONTACT_FORM_DATA.budget.data.includes(option);
+    setSelectedOptions((prev) => {
+      if (isBudgetOption) {
+        const updatedOptions = prev.filter(
+          (opt) => !CONTACT_FORM_DATA.budget.data.includes(opt)
         );
+        return updatedOptions.includes(option)
+          ? updatedOptions
+          : [...updatedOptions, option];
+      } else {
+        return prev.includes(option)
+          ? prev.filter((opt) => opt !== option)
+          : [...prev, option];
       }
     });
-    setSelectedOptions((prev) =>
-      prev.includes(option)
-        ? prev.filter((opt) => opt !== option)
-        : [...prev, option]
-    );
   }
 
   useEffect(() => {
@@ -71,8 +75,6 @@ export default function ContactForm() {
     if (formState?.message === "Email send!") setIsPopUpVisible(true);
     findError();
   }, [formState]);
-
-  const BUTTON_TEXT = "Wyślij";
 
   return (
     <>
@@ -105,22 +107,19 @@ export default function ContactForm() {
               {CONTACT_FORM_DATA.inputsPlaceholders.placeholders
                 .slice(0, 4)
                 .map((placeholder, index) => (
-                  <>
-                    <div key={index} className='flex flex-col gap-2'>
-                      <input
-                        className={`focus:border-b-[#006EEF] outline-none pb-2 w-[300px] bg-transparent border-b-[1.2px] border-b-[#909090] text-ellipsis`}
-                        name={placeholder}
-                        placeholder={placeholder}
-                      />
-
-                      {placeholder === "Imię i nazwisko*" &&
-                        errors["name"] &&
-                        ERROR_COMPONENT}
-                      {placeholder === "Adres email*" &&
-                        errors["email"] &&
-                        ERROR_COMPONENT}
-                    </div>
-                  </>
+                  <div key={index} className='flex flex-col gap-2'>
+                    <input
+                      className='focus:border-b-[#006EEF] outline-none pb-2 w-[300px] bg-transparent border-b-[1.2px] border-b-[#909090] text-ellipsis'
+                      name={placeholder}
+                      placeholder={placeholder}
+                    />
+                    {placeholder === "Imię i nazwisko*" &&
+                      errors["name"] &&
+                      ERROR_COMPONENT}
+                    {placeholder === "Adres email*" &&
+                      errors["email"] &&
+                      ERROR_COMPONENT}
+                  </div>
                 ))}
               <ReactTextareaAutosize
                 placeholder={

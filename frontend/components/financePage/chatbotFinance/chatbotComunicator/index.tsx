@@ -50,6 +50,7 @@ export default function ChatbotCommunicator({
     if (messageListRef.current) {
       messageListRef.current.scrollTop = messageListRef.current.scrollHeight;
     }
+    localStorage.setItem("conversation-finance", JSON.stringify(conversation));
   }, [conversation]);
 
   useEffect(() => {

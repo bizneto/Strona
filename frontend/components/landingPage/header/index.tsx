@@ -1,4 +1,4 @@
-// import ButtonWithArrow from "@/components/shared/buttonWithArrow";
+import ButtonWithArrow from "@/components/shared/buttonWithArrow";
 import HamburgerMenu from "@/components/financePage/header/headerHamburgerMenu";
 import { SSRMobileDetection } from "@/utils/ssrDeviceDetection";
 import Image from "next/image";
@@ -13,10 +13,10 @@ export default async function Header() {
     <header className='h-[260px] md:h-[472px] mt-8 flex flex-col justify-between w-10/12 md:w-[89%] 2xl:w-[1440px] mx-auto'>
       <div className='flex justify-between w-full'>
         <Image quality={50} src={isMobile ? logo : logoDesktop} alt='logo' />
-        <span className='block md:hidden'>
+        {/* <span className='block md:hidden'>
           <HamburgerMenu color='black' />
         </span>
-        {/* <span className='hidden md:block'>
+        <span className='hidden md:block'>
           <ButtonWithArrow
             arrowColor='black'
             color='#000'

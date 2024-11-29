@@ -8,12 +8,11 @@ import arrowRight from "@/public/svgs/smallerRightArrow.svg";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/digitalPage/digitalPageNavbar";
 import { stringToRoute } from "@/shared";
-import { useRouter } from "next/navigation";
 
 export default function DigitalMobileMenu() {
   const { isMobile, isMobileMenuOpen, setIsMobileMenuOpen } =
     useGlobalContext();
-  const [selectedLanguage, setSelectedLanguage] = useState("PL");
+  // const [selectedLanguage, setSelectedLanguage] = useState("PL");
   const [subPageData, setSubPageData] = useState({
     isVisible: false,
     routeOption: "",
@@ -78,7 +77,7 @@ export default function DigitalMobileMenu() {
         />
       )}
       <div
-        className={`absolute overflow-hidden transition-all duration-700 w-screen z-[999] left-0 bg-white ${
+        className={`fixed overflow-hidden transition-all duration-700 w-screen z-[999] left-0 bg-white ${
           isMobileMenuOpen
             ? "animate-[slideOutFromTop_0.7s_linear] h-[100dvh]"
             : "animate-[slideToTop_0.7s_linear] h-0"

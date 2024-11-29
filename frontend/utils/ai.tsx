@@ -12,16 +12,12 @@ export interface Message {
   content: string;
 }
 
-let instruction: string = "";
-
 export async function continueConversation(history: Message[], page: TPage) {
   "use server";
   const strapiService = await getStrapiInstance(page);
 
   const stream = createStreamableValue();
-  if (!instruction) {
-    instruction = await strapiService.getInstructions();
-  }
+  const instruction = await strapiService.getInstructions(page);
 
   (async function () {
     let content = "";

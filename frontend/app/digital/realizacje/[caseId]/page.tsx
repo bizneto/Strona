@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import NextProject from "@/components/caseStudyPage/nextProject";
 import { fetchCaseStudyByID } from "@/utils/caseStudies";
 import Navbar from "@/components/digitalPage/digitalPageNavbar";
+import { revalidatePath } from "next/cache";
 
 const componentsMap = {
   "component.header": dynamic(
@@ -33,6 +34,7 @@ export default async function CaseStudyPage({
 }: {
   params: { caseId: number };
 }) {
+  revalidatePath(`/digital/${params.caseId}`);
   const components: { __component: string }[] =
     (await fetchCaseStudyByID(params.caseId)) ?? [];
 

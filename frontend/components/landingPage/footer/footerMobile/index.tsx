@@ -12,7 +12,7 @@ import rzetelnaFirma from "@/public/svgs/rzetelnaFirma.svg";
 
 export default function FooterMobile() {
   return (
-    <div className='h-fit w-10/12 mx-auto flex-col flex gap-8'>
+    <div className='w-10/12 mx-auto flex-col flex gap-8'>
       {CONTACT_DATA.map(
         ({
           title,
@@ -70,10 +70,7 @@ export default function FooterMobile() {
         )
       )}
       <div className='flex flex-col gap-4'>
-        <Link
-          target='_blank'
-          href={"https://wizytowka.rzetelnafirma.pl/1RB990XXHZH6QSBO/"}
-        >
+        <Link target="_blank" href={"https://wizytowka.rzetelnafirma.pl/1RB990XXHZH6QSBO/"}>
           <Image src={rzetelnaFirma} alt='rzetelna firma' />
         </Link>
         {BIZNETO_LOGOS.map((img) => (

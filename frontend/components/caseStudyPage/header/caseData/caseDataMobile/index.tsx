@@ -12,7 +12,7 @@ export default function CaseDataMobile({ data }: IPassedData) {
   const SECTION_TITLE = "Informacje";
 
   return (
-    <div className='block md:hidden'>
+    <div className='block lg:hidden'>
       <Image
         src={arrowInCircle}
         onClick={() => setIsPopUpVisbile(true)}
@@ -20,7 +20,7 @@ export default function CaseDataMobile({ data }: IPassedData) {
         className={`${isPopUpVisbile ? "hidden" : "block"}`}
       />
       {isPopUpVisbile && (
-        <div className='fixed inset-0 z-10'>
+        <div className='fixed inset-0 z-[100]'>
           <div className='absolute inset-0 bg-black bg-opacity-[5%]'></div>
           <div className='fixed bottom-0 w-screen h-[393px] left-0 z-20 flex items-end'>
             <div className='w-full bg-white bg-opacity-70 backdrop-blur-[10px] rounded-t-[8px] relative p-4'>
@@ -36,18 +36,15 @@ export default function CaseDataMobile({ data }: IPassedData) {
                 </div>
                 <div className='font-medium flex flex-col gap-4'>
                   {Object.entries(data).map(([label, value], index) => (
-                    <span
-                      key={index}
-                      className='flex flex-col gap-3 max-h-[67px]'
-                    >
+                    <span key={index} className='flex flex-col gap-3'>
                       <p className='text-[14px] leading-[19.6px] text-[#505050]'>
                         {label}
                       </p>
-                      <span className='flex gap-2 text-[18px] leading-[25.2px]'>
+                      <span className='flex flex-wrap  gap-2 md:text-[18px] md:leading-[25.2px]'>
                         {Array.isArray(value)
                           ? value.map((el) => (
                               <span
-                                className='px-6 py-[10px] rounded-[100px] border-[1.2px] border-black'
+                                className='text-nowrap whitespace-nowrap px-6 py-[10px] rounded-[100px] border-[1.2px] border-black'
                                 key={el}
                               >
                                 {el}

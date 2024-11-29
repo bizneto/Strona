@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/shared/sectionTitle";
-import { fetchCaseStudyByID } from "@/utils/caseStudies";
-import CaseStudyItem from "@/components/shared/caseStudy";
+import { fetchAllCaseStudies, fetchCaseStudyByID } from "@/utils/caseStudies";
+import CaseStudyItem from "@/components/shared/caseStudies/caseStudyItem";
 
 interface CaseStudyComponent {
   id: number;
@@ -16,33 +16,28 @@ interface CaseStudyProps {
   params: { caseId: number };
 }
 
-async function findValidCaseStudy(
-  initialCaseId: number,
-  direction: "prev" | "next"
-) {
-  let nextCaseId = initialCaseId;
-  let data = null;
+async function serveNextCaseStudy(currentCaseId: number) {
+  try {
+    const allCaseStudies = await fetchAllCaseStudies();
 
-  const MAX_ATTEMPTS = 5;
-  let attempts = 0;
+    allCaseStudies.sort(
+      (a: CaseStudyComponent, b: CaseStudyComponent) => a.id - b.id
+    );
 
-  while (attempts < MAX_ATTEMPTS) {
-    data = await fetchCaseStudyByID(nextCaseId);
-    if (data) {
-      break;
-    }
-    attempts++;
-    nextCaseId = direction === "prev" ? nextCaseId - 1 : nextCaseId + 1;
+    const nextCaseStudy = allCaseStudies.find(
+      (caseStudy: CaseStudyComponent) => caseStudy.id > currentCaseId
+    );
+
+    const prevCaseStudy = allCaseStudies
+      .slice()
+      .reverse()
+      .find((caseStudy: CaseStudyComponent) => caseStudy.id < currentCaseId);
+
+    return nextCaseStudy || prevCaseStudy;
+  } catch (error) {
+    console.error("Error", error);
+    return undefined;
   }
-
-  if (!data) {
-    console.error(`Failed to fetch data after ${MAX_ATTEMPTS} attempts.`);
-  }
-
-  return {
-    id: nextCaseId,
-    data: data,
-  };
 }
 
 export default async function NextProject({ params }: CaseStudyProps) {
@@ -51,41 +46,21 @@ export default async function NextProject({ params }: CaseStudyProps) {
   const { caseId } = params;
   const parsedCaseId = Number(caseId);
 
-  if (isNaN(parsedCaseId)) {
-    console.error("Invalid caseId provided");
-    return <div>Invalid case study ID!</div>;
-  }
+  const { attributes = {}, id = 0 } = await serveNextCaseStudy(parsedCaseId);
 
-  let data = null;
+  if (!attributes || !id) return;
 
-  try {
-    data = await findValidCaseStudy(parsedCaseId + 1, "next");
-    if (!data.data) {
-      data = await findValidCaseStudy(parsedCaseId - 1, "prev");
-    }
-  } catch (error) {
-    console.error("Error fetching case study", error);
-    return <div>Error loading case study!</div>;
-  }
-
-  if (!data.data) {
-    return <div>No case studies found!</div>;
-  }
-
-  const titleComponent = data.data.find(
-    (component: CaseStudyComponent) =>
-      component.__component === "component.header"
+  const pageComponents = attributes.Page || [];
+  const headerComponent = pageComponents.find(
+    (component: { __component: string }) =>
+      component.__component == "component.header"
   );
-  const thumbnailComponent = data.data.find(
-    (component: CaseStudyComponent) =>
-      component.__component === "component.thumbnail"
+  const thumbnailComponent = pageComponents.find(
+    (component: { __component: string }) =>
+      component.__component == "component.thumbnail"
   );
 
-  const title = titleComponent?.title || "No Title";
-  const date = titleComponent?.date || "No date";
-  const services = titleComponent?.services || "No Services";
-  const thumbnail = thumbnailComponent;
-  const client = titleComponent?.client || "No client";
+  const { title = "", client = "", services = "", date = "" } = headerComponent;
 
   return (
     <section className='w-full py-8 md:py-16 font-medium  bg-transparent'>
@@ -101,9 +76,9 @@ export default async function NextProject({ params }: CaseStudyProps) {
             {HEADER}
           </h4>
           <CaseStudyItem
-            thumbnail={thumbnail}
+            id={id}
+            thumbnail={thumbnailComponent}
             date={date}
-            id={data.id}
             services={services}
             title={title}
             client={client}

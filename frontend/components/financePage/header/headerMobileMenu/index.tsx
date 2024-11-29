@@ -17,7 +17,7 @@ export interface IMobileMenu {
 export default function MobileMenu() {
   const { isMobile, isMobileMenuOpen, setIsMobileMenuOpen } =
     useGlobalContext();
-  const [selectedLanguage, setSelectedLanguage] = useState("PL");
+  // const [selectedLanguage, setSelectedLanguage] = useState("PL");
   const [subPageData, setSubPageData] = useState({
     isVisible: false,
     routeOption: "",
@@ -52,7 +52,7 @@ export default function MobileMenu() {
         />
       )}
       <div
-        className={`absolute overflow-hidden transition-all duration-700 w-screen z-[999] left-0 bg-white ${
+        className={`fixed overflow-hidden transition-all duration-700 w-screen z-[999] left-0 bg-white ${
           isMobileMenuOpen
             ? "animate-[slideOutFromTop_0.7s_linear] h-[100dvh]"
             : "animate-[slideToTop_0.7s_linear] h-0"

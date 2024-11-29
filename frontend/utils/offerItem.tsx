@@ -4,7 +4,7 @@ const STRAPI_KEY = process.env.STRAPI_KEY;
 
 const headersList = {
   Authorization: `Bearer ${STRAPI_KEY}`,
-  "Cache-Control": "no-cache",
+  "Cache-Control": "no-store",
 };
 
 export async function fetchOfferItemByName(name: string) {

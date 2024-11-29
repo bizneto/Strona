@@ -1,21 +1,16 @@
-import CaseStudyItem from "@/components/shared/caseStudy";
+import CaseStudyItem from "@/components/shared/caseStudies/caseStudyItem";
 import SectionTitle from "@/components/shared/sectionTitle";
+import { fetchCaseStudyByID } from "@/utils/caseStudies";
 
 export default async function CaseStudy() {
   const SECTION_TITLE = "Case Study";
   const HEADER = "Realizacja bradningu";
 
-  const mockThumbnailData = {
-    image: {
-      data: {
-        attributes: {
-          url: "/uploads/contact_Desktop_Background_8c71bdf7ba.webp",
-          width: 1200,
-          height: 1200,
-        },
-      },
-    },
-  };
+  const data = await fetchCaseStudyByID(6);
+
+  if (!data) return;
+  const { title, client, date, services } = data[0];
+  const thumbnailData = data[1];
 
   return (
     <section className='py-8 md:py-16 font-medium text-white bg-black'>
@@ -31,12 +26,12 @@ export default async function CaseStudy() {
             {HEADER}
           </h4>
           <CaseStudyItem
-            thumbnail={mockThumbnailData}
-            date='2024'
-            id={5}
-            services='Branding, Web Design'
-            client='Lorem ipsum'
-            title='Crimson Coffe'
+            thumbnail={thumbnailData}
+            date={date}
+            id={6}
+            services={services}
+            client={client}
+            title={title}
             colorOverride='#000'
           />
         </div>

@@ -8,7 +8,7 @@ export default function Footer() {
   const { isMobile } = useGlobalContext();
 
   return (
-    <div className='bg-black w-full h-fit  text-white py-8 md:py-16'>
+    <div className='bg-black w-full h-full  text-white py-8 md:py-16'>
       {isMobile ? <FooterMobile /> : <FooterAlt />}
     </div>
   );

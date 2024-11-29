@@ -2,13 +2,13 @@
 
 import SectionTitle from "@/components/shared/sectionTitle";
 import { HEADER, SECTION_TITLE } from "../data";
-import { IProces, SectionFooter } from "..";
+import { IProcess, SectionFooter } from "..";
 import { useState } from "react";
 import Image from "next/image";
 import useGlobalContext from "@/hooks/useGlobalContext";
 import { imageUrl } from "@/shared";
 
-export default function ProcessDesktop({ Process }: IProces) {
+export default function ProcessDesktop({ Process }: IProcess) {
   const [activeIndex, setActiveIndex] = useState<number | null>();
   const { isMobile } = useGlobalContext();
 

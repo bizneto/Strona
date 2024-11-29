@@ -115,3 +115,5 @@ export const RADIO_ERROR_MESSAGE = (
     <span className='underline'>Polityki Prywatności</span> jest wymagana{" "}
   </p>
 );
+
+export const BUTTON_TEXT = "Wyślij";

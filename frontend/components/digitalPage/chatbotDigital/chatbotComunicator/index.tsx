@@ -17,7 +17,7 @@ import biznetoLogoGray from "@/public/svgs/biznetoLogoGrayBlueDot.svg";
 import ChatbotMessages from "./chatbotComunicatorResponses";
 import { continueConversation, Message } from "@/utils/ai";
 import { readStreamableValue } from "ai/rsc";
-import { getConversationHistory, getStrapiInstance } from "@/utils/strapi";
+import { getConversationHistory } from "@/utils/strapi";
 
 interface IChatbotCommunicator {
   setIsCommunicatorVisible: Dispatch<SetStateAction<boolean>>;
@@ -33,7 +33,7 @@ export default function ChatbotCommunicator({
     {
       role: "assistant",
       content:
-        "Cześć! Szukasz wsparcia w zakresie finansów dla swojej firmy? Porozmawiajmy!",
+        "Cześć! Jestem DIGIT, Twój asystent od web designu i brandingu. Jak mogę Ci pomóc?",
     },
   ]);
   const messageListRef = useRef<HTMLUListElement>(null);

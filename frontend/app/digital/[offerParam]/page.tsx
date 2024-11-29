@@ -9,6 +9,7 @@ import Value from "@/components/offerItemPage/value";
 import Navbar from "@/components/digitalPage/digitalPageNavbar";
 import { fetchOfferItemByName } from "@/utils/offerItem";
 import ButtonWithArrow from "@/components/shared/buttonWithArrow";
+import { revalidatePath } from "next/cache";
 
 interface IOfferItemPage {
   params: {
@@ -18,6 +19,7 @@ interface IOfferItemPage {
 
 export default async function OfferItemPage({ params }: IOfferItemPage) {
   const { offerParam } = params;
+  revalidatePath(`/digital/${offerParam}`);
   const data = await fetchOfferItemByName(offerParam);
 
   // temporary

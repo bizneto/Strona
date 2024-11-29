@@ -71,9 +71,9 @@ export default function OfferDesktop({ Offer }: IOffer) {
                   {
                     Image: {
                       data: {
-                        attributes: { height, url, width },
-                      },
-                    },
+                        attributes: { height = 0, url = "", width = 0 } = {},
+                      } = {},
+                    } = {},
                   },
                   index
                 ) => (
@@ -114,6 +114,7 @@ export default function OfferDesktop({ Offer }: IOffer) {
                   fillColor='#006EEF'
                   altHeight={50}
                   text={ButtonText}
+                  altHref='/digital/kontakt'
                 />
               </div>
             ))}

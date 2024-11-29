@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/shared/sectionTitle";
 import ButtonWithArrow from "@/components/shared/buttonWithArrow";
-import CaseStudies from "@/components/shared/caseStudies";
+import CaseStudies from "@/components/shared/caseStudies/caseStudiesWrapper";
 
 export default async function Realizations() {
   const SECTION_TITLE = "Case Study";

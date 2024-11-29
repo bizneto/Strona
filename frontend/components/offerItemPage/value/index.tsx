@@ -8,8 +8,8 @@ interface IValue {
 }
 
 export default function Value({ Value }: IValue) {
-  if (!Value) return;
-  const { Header, Text } = Value;
+  if (!Value) return null;
+  const { Header = "", Text = "" } = Value ?? {};
   const SECTION_TITLE = "Wartość";
 
   return (
@@ -20,7 +20,7 @@ export default function Value({ Value }: IValue) {
         <span>
           <SectionTitle color='#006EEF' sectionTitle={SECTION_TITLE} />
         </span>
-        <div className='w-fit font-medium flex flex-col gap-6 md:gap-8'>
+        <div className='w-fit md:w-full font-medium flex flex-col gap-6 md:gap-8'>
           <h2 className='text-[24px] lg:text-[48px] leading-[33.6px] lg:leading-[67.2px]'>
             {Header}
           </h2>

@@ -127,10 +127,10 @@ export default function FooterDesktop() {
             <p className='flex text-[14px] leading-[18.2px] text-[#909090]'>
               {GRAY_TEXTS_ARR_DESKTOP[0]}
             </p>
-            <Link target='_blank' href='/pdf/Regulamin.pdf'>
+            <Link target='_blank' href='/pdf/PolitykaPrywatnosci.pdf'>
               {GRAY_TEXTS_ARR_DESKTOP[1]}
             </Link>
-            <Link target='_blank' href='/pdf/PolitykaPrywatnosci.pdf'>
+            <Link target='_blank' href='/pdf/Regulamin.pdf'>
               {GRAY_TEXTS_ARR_DESKTOP[2]}
             </Link>
             <div className='flex items-center'>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ChatbotAssistantPicture from "./chatbotAssistantPicture";
 import ChatbotCommunicator from "./chatbotComunicator";
 
-export default function ChatbotFinance() {
+export default function ChatbotDigital() {
   const [isCommunicatorVisible, setIsCommunicatorVisible] = useState(false);
   const [isMessageVisible, setIsMessageVisible] = useState(true);
 
@@ -23,8 +23,6 @@ export default function ChatbotFinance() {
       "isCommunicatorVisible",
       JSON.stringify(isCommunicatorVisible)
     );
-
-    if (isCommunicatorVisible) setIsMessageVisible(false);
   }, [isCommunicatorVisible]);
 
   return (

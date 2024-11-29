@@ -27,6 +27,10 @@ export default function CategoriesContextProvider({
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   function handleCategorySelection(category: string) {
+    if (category === "Wszystkie" || selectedCategories.includes("Wszystkie"))
+      setSelectedCategories((prevState) =>
+        prevState.filter((el) => el === category)
+      );
     if (selectedCategories.includes(category)) {
       setSelectedCategories((prevState) =>
         prevState.filter((el) => el !== category)

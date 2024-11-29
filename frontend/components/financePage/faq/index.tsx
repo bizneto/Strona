@@ -6,7 +6,7 @@ import useSectionVisibility from "@/utils/intersectionObserver";
 
 export default function FAQ() {
   const sectionRef = useRef(null);
-  const isSectionVisible = useSectionVisibility(sectionRef, 1);
+  const isSectionVisible = useSectionVisibility(sectionRef);
 
   const SECTION_TITLE = "FAQ";
   const HEADER_TEXT = "Najczęściej zadawane pytania";
@@ -21,7 +21,7 @@ export default function FAQ() {
           ${isSectionVisible ? "text-[#FF3C50]" : "text-[#000]"}          
           md:sticky top-4 `}
         >
-          <span ref={sectionRef}>
+          <span>
             <span className='font-black text-2xl mr-2'>&bull;</span>
             {SECTION_TITLE}
           </span>
@@ -30,7 +30,7 @@ export default function FAQ() {
           <h4 className='text-[28px] leading-8 mb-8 md:text-[48px] md:leading-[58.51px]'>
             {HEADER_TEXT}
           </h4>
-          <QuestionsMap />
+          <QuestionsMap forwardedRef={sectionRef} />
         </div>
       </div>
     </section>

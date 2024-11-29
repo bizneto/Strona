@@ -79,11 +79,11 @@ export default function Offer() {
         <div className='w-full flex flex-row justify-between'>
           <div
             ref={stickyRef}
-            className='hidden md:flex items-start justify-start flex-col sticky top-6 md:text-[180px] lg:text-[250px] xl:text-[320px] md:leading-[130px] lg:leading-[190px] xl:leading-[225px] md:mr-12 md:h-[250px] xl:h-[351px]  md:w-[45%]  lg:w-full  md:max-w-[371px] text-[#cfcfcf] lg:mr-8'
+            className='hidden min-[820px]:flex items-start justify-start flex-col sticky top-6 md:text-[180px] lg:text-[250px] xl:text-[320px] md:leading-[130px] lg:leading-[190px] xl:leading-[225px] md:mr-12 md:h-[250px] xl:h-[351px]  md:w-[45%]  lg:w-full  md:max-w-[371px] text-[#cfcfcf] lg:mr-8'
           >
             {currentIndex < 10 ? `0${currentIndex}` : currentIndex}
           </div>
-          <div className='relative w-full md:w-[78%] max-w-[726px] flex flex-col items-end justify-end gap-8'>
+          <div className='relative w-full  min-[820px]:w-[78%] max-w-[726px] flex flex-col items-end justify-end gap-8'>
             {DATA.map(({ title, tags, text, index }) => (
               <Link
                 target='_top'

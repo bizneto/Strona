@@ -1,31 +1,12 @@
 "use client";
 
-import ChatbotIntialMessage from "./chatbotInitialMessage";
-import { useEffect, useState } from "react";
+import ChatbotInitialMessage from "./chatbotInitialMessage";
+import { useState } from "react";
 import ChatbotAssistantPicture from "./chatbotAssistantPicture";
 import ChatbotCommunicator from "./chatbotComunicator";
 
 export default function ChatbotDigital() {
   const [isCommunicatorVisible, setIsCommunicatorVisible] = useState(false);
-  const [isMessageVisible, setIsMessageVisible] = useState(true);
-
-  
-
-  useEffect(() => {
-    const storedIsCommunicatorVisible = sessionStorage.getItem(
-      "isCommunicatorVisible"
-    );
-    if (storedIsCommunicatorVisible !== null) {
-      setIsCommunicatorVisible(JSON.parse(storedIsCommunicatorVisible));
-    }
-  }, []);
-
-  useEffect(() => {
-    sessionStorage.setItem(
-      "isCommunicatorVisible",
-      JSON.stringify(isCommunicatorVisible)
-    );
-  }, [isCommunicatorVisible]);
 
   return (
     <div
@@ -42,9 +23,7 @@ export default function ChatbotDigital() {
         />
       ) : (
         <div className='flex gap-3 size-auto'>
-          {isMessageVisible && (
-            <ChatbotIntialMessage setIsMessageVisible={setIsMessageVisible} />
-          )}
+          <ChatbotInitialMessage />
           <div
             onClick={() => setIsCommunicatorVisible(true)}
             className='cursor-pointer size-[78px] md:size-[99.82px] overflow-clip relative shadow-aiAssistant rounded-[999px] border-[2px] border-[#FCFCFC]'

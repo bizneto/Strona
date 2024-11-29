@@ -18,12 +18,13 @@ export function SectionFooter() {
         fillColor='#006EEF'
         altHeight={50}
         text={START_PROJECT}
+        altHref='/digital/kontakt'
       />
     </div>
   );
 }
 
-export interface IProces {
+export interface IProcess {
   Process: {
     id: number;
     Title: string;
@@ -40,7 +41,9 @@ export interface IProces {
   }[];
 }
 
-export default function Process({ Process }: IProces) {
+export default function Process({ Process }: IProcess) {
+  if (!Process) return null;
+
   return (
     <>
       <ProcessMobile Process={Process} />

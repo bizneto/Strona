@@ -14,6 +14,7 @@ export interface IOffer {
 }
 
 export default async function Offer({ Offer }: IOffer) {
+  if (!Offer) return null;
 
   return (
     <>

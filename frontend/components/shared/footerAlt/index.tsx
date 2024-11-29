@@ -42,7 +42,7 @@ export default function FooterAlt() {
   ];
 
   return (
-    <div className='w-full h-full bg-black text-white overflow-hidden'>
+    <div className='w-full bg-black text-white overflow-hidden'>
       <div className={`w-10/12 md:w-[89%] 2xl:w-[1440px] mx-auto py-16`}>
         <div className='flex flex-col gap-7 text-[12px] leading-[14.63px]'>
           <div

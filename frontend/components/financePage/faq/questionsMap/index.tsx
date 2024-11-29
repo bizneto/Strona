@@ -5,6 +5,10 @@ import minusSign from "@/public/images/minus.png";
 import plusSign from "@/public/images/plus.png";
 import Image from "next/image";
 
+interface IQuestionsMapProps {
+  forwardedRef: MutableRefObject<any>;
+}
+
 const DATA = [
   {
     question: "Jakie są koszty korzystania z usług biura rachunkowego Bizneto?",
@@ -44,13 +48,17 @@ const DATA = [
   },
 ];
 
-export default function QuestionsMap() {
+export default function QuestionsMap({ forwardedRef }: IQuestionsMapProps) {
   const [answerVisible, setAnswerVisible] = useState(0);
 
   return (
     <>
       {DATA.map(({ question, answer }, index) => (
-        <div key={index} onClick={() => setAnswerVisible(index)}>
+        <div
+          key={index}
+          onClick={() => setAnswerVisible(index)}
+          ref={forwardedRef}
+        >
           <div
             className={`py-4 md:py-6 flex justify-between bg-white items-start`}
           >
@@ -70,9 +78,7 @@ export default function QuestionsMap() {
           </div>
           <p
             className={`${
-              answerVisible === index
-                ? "max-h-[260px] duration-1000 pb-2"
-                : "max-h-0 duration-0"
+              answerVisible === index ? "max-h-[260px] duration-1000 pb-2" : "max-h-0 duration-0"
             }  text-[14px] leading-[19.6px] md:text-[16px] md:leading-[22.4px] overflow-hidden border-b  transition-all  ease-in-out `}
           >
             {answer}

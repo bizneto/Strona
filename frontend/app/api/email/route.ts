@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const contactEmail = process.env.CONTACT_EMAIL;
 
 interface IRequestTypes {
   dataToSend: { field: string; data: string[] }[];
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
 
   await resend.emails.send({
     from: "email@bizneto.pl",
-    to: "grabovskii745@gmail.com",
+    to: contactEmail!,
     subject: "Formularz",
     html: `<p>Somebody submitted form at <strong>Bizneto</strong>!</p><br>${inputsHTML}<br><p>${dataHTML}</p>`,
   });

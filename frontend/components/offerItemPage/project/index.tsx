@@ -10,7 +10,9 @@ interface IProject {
 export default function Project({ Projekt }: IProject) {
   const SECTION_TITLE = "Projekt";
 
-  const { Title, Subtitle } = Projekt;
+  if (!Projekt) return null;
+
+  const { Title = "", Subtitle = "" } = Projekt ?? {};
 
   return (
     <header className='w-full h-full py-8 md:py-16'>
