@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import "server-only";
 
 const STRAPI_KEY = process.env.STRAPI_KEY;
+const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337';
 
 const headersList = {
   Authorization: `Bearer ${STRAPI_KEY}`,
@@ -13,7 +14,7 @@ const headersList = {
 export async function fetchCaseStudyByID(id: number) {
   try {
     const response = await fetch(
-      `http://bizneto.programero.pl/api/case-study-pages/${id}?populate[Page][populate]=*`,
+      `${STRAPI_URL}/api/case-study-pages/${id}?populate[Page][populate]=*`,
       {
         method: "GET",
         headers: headersList,
@@ -37,8 +38,7 @@ export async function fetchCaseStudyByID(id: number) {
 export async function fetchAllCaseStudies() {
   try {
     const response = await fetch(
-      `http://bizneto.programero.pl/api/case-study-pages?populate[Page][populate]=*`,
-      // `http://127.0.0.1:1337/api/case-study-pages?populate[Page][populate]=*`,
+      `${STRAPI_URL}/api/case-study-pages?populate[Page][populate]=*`,
       {
         method: "GET",
         headers: headersList,

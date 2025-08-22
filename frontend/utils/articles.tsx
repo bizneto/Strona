@@ -23,10 +23,11 @@ export interface Article {
   attributes: ArticleAttributes;
 }
 const STRAPI_KEY = process.env.STRAPI_KEY;
+const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337';
 
 export default async function fetchAllArticles() {
   const response = await fetch(
-    "http://bizneto.programero.pl/api/article-pages?populate[Page][populate]=*",
+    `${STRAPI_URL}/api/article-pages?populate[Page][populate]=*`,
     {
       method: "GET",
       headers: {
@@ -44,7 +45,7 @@ export default async function fetchAllArticles() {
 export async function fetchArticleById(id: number) {
   try {
     const response = await fetch(
-      `http://bizneto.programero.pl/api/article-pages/${id}?populate[Page][populate]=*`,
+      `${STRAPI_URL}/api/article-pages/${id}?populate[Page][populate]=*`,
       {
         method: "GET",
         headers: {

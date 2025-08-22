@@ -1,0 +1,575 @@
+{
+  "generatedAt": "2025-07-24T17:16:02.901Z",
+  "domain": "bizneto.pl",
+  "totalKeywords": 35,
+  "keywordsByTier": {
+    "tier1": {
+      "count": 8,
+      "totalVolume": 80700,
+      "keywords": [
+        {
+          "keyword": "biuro rachunkowe",
+          "targetUrl": "/finanse",
+          "volume": 22200,
+          "difficulty": "High",
+          "priority": 1
+        },
+        {
+          "keyword": "księgowość",
+          "targetUrl": "/finanse/uslugi/ksiegowosc",
+          "volume": 18100,
+          "difficulty": "High",
+          "priority": 1
+        },
+        {
+          "keyword": "usługi księgowe",
+          "targetUrl": "/finanse",
+          "volume": 8100,
+          "difficulty": "High",
+          "priority": 1
+        },
+        {
+          "keyword": "doradztwo podatkowe",
+          "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+          "volume": 6600,
+          "difficulty": "High",
+          "priority": 1
+        },
+        {
+          "keyword": "księgowy",
+          "targetUrl": "/finanse",
+          "volume": 14800,
+          "difficulty": "High",
+          "priority": 1
+        },
+        {
+          "keyword": "kadry i płace",
+          "targetUrl": "/finanse/uslugi/kadry-place",
+          "volume": 4400,
+          "difficulty": "Medium",
+          "priority": 1
+        },
+        {
+          "keyword": "obsługa księgowa",
+          "targetUrl": "/finanse",
+          "volume": 3600,
+          "difficulty": "Medium",
+          "priority": 1
+        },
+        {
+          "keyword": "biuro księgowe",
+          "targetUrl": "/finanse",
+          "volume": 2900,
+          "difficulty": "Medium",
+          "priority": 1
+        }
+      ]
+    },
+    "tier2_cities": {
+      "count": 12,
+      "totalVolume": 5580,
+      "keywords": [
+        {
+          "keyword": "biuro rachunkowe Warszawa",
+          "targetUrl": "/finanse/warszawa",
+          "volume": 1300,
+          "difficulty": "High",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Kraków",
+          "targetUrl": "/finanse/krakow",
+          "volume": 880,
+          "difficulty": "High",
+          "priority": 2
+        },
+        {
+          "keyword": "biuro rachunkowe Wrocław",
+          "targetUrl": "/finanse/wroclaw",
+          "volume": 720,
+          "difficulty": "High",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Gdańsk",
+          "targetUrl": "/finanse/gdansk",
+          "volume": 590,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "biuro rachunkowe Poznań",
+          "targetUrl": "/finanse/poznan",
+          "volume": 480,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Łódź",
+          "targetUrl": "/finanse/lodz",
+          "volume": 390,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "biuro rachunkowe Katowice",
+          "targetUrl": "/finanse/katowice",
+          "volume": 320,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Lublin",
+          "targetUrl": "/finanse/lublin",
+          "volume": 260,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "biuro rachunkowe Szczecin",
+          "targetUrl": "/finanse/szczecin",
+          "volume": 210,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Bydgoszcz",
+          "targetUrl": "/finanse/bydgoszcz",
+          "volume": 180,
+          "difficulty": "Medium",
+          "priority": 2
+        },
+        {
+          "keyword": "biuro rachunkowe Rzeszów",
+          "targetUrl": "/finanse/rzeszow",
+          "volume": 140,
+          "difficulty": "Low",
+          "priority": 2
+        },
+        {
+          "keyword": "księgowość Rzeszów",
+          "targetUrl": "/finanse/rzeszow",
+          "volume": 110,
+          "difficulty": "Low",
+          "priority": 2
+        }
+      ]
+    },
+    "tier3_longtail": {
+      "count": 8,
+      "totalVolume": 7740,
+      "keywords": [
+        {
+          "keyword": "otwórz firmę",
+          "targetUrl": "/finanse/otworz-firme",
+          "volume": 2400,
+          "difficulty": "Medium",
+          "priority": 3
+        },
+        {
+          "keyword": "założenie działalności gospodarczej",
+          "targetUrl": "/finanse/otworz-firme",
+          "volume": 1600,
+          "difficulty": "Medium",
+          "priority": 3
+        },
+        {
+          "keyword": "księgowość online",
+          "targetUrl": "/finanse/uslugi/ksiegowosc",
+          "volume": 1900,
+          "difficulty": "Medium",
+          "priority": 3
+        },
+        {
+          "keyword": "kalkulator księgowy",
+          "targetUrl": "/finanse/kalkulator",
+          "volume": 880,
+          "difficulty": "Low",
+          "priority": 3
+        },
+        {
+          "keyword": "przeniesienie księgowości",
+          "targetUrl": "/finanse/przenies-ksiegowosc",
+          "volume": 320,
+          "difficulty": "Low",
+          "priority": 3
+        },
+        {
+          "keyword": "zmiana biura rachunkowego",
+          "targetUrl": "/finanse/przenies-ksiegowosc",
+          "volume": 260,
+          "difficulty": "Low",
+          "priority": 3
+        },
+        {
+          "keyword": "księgowość dla firm IT",
+          "targetUrl": "/finanse/uslugi/ksiegowosc",
+          "volume": 210,
+          "difficulty": "Low",
+          "priority": 3
+        },
+        {
+          "keyword": "księgowość e-commerce",
+          "targetUrl": "/finanse/uslugi/ksiegowosc",
+          "volume": 170,
+          "difficulty": "Low",
+          "priority": 3
+        }
+      ]
+    },
+    "tier4_competitive": {
+      "count": 4,
+      "totalVolume": 3090,
+      "keywords": [
+        {
+          "keyword": "najlepsze biuro rachunkowe",
+          "targetUrl": "/finanse",
+          "volume": 590,
+          "difficulty": "High",
+          "priority": 4
+        },
+        {
+          "keyword": "tanie usługi księgowe",
+          "targetUrl": "/finanse",
+          "volume": 480,
+          "difficulty": "Medium",
+          "priority": 4
+        },
+        {
+          "keyword": "ceny księgowości",
+          "targetUrl": "/finanse",
+          "volume": 720,
+          "difficulty": "Medium",
+          "priority": 4
+        },
+        {
+          "keyword": "ile kosztuje księgowy",
+          "targetUrl": "/finanse/kalkulator",
+          "volume": 1300,
+          "difficulty": "Medium",
+          "priority": 4
+        }
+      ]
+    },
+    "seasonal": {
+      "count": 3,
+      "totalVolume": 8900,
+      "keywords": [
+        {
+          "keyword": "rozliczenie roczne firmy",
+          "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+          "volume": 4400,
+          "difficulty": "Medium",
+          "priority": 2,
+          "season": "Q1"
+        },
+        {
+          "keyword": "PIT dla firm",
+          "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+          "volume": 2900,
+          "difficulty": "Medium",
+          "priority": 2,
+          "season": "Q1-Q2"
+        },
+        {
+          "keyword": "sprawozdanie finansowe",
+          "targetUrl": "/finanse/uslugi/ksiegowosc",
+          "volume": 1600,
+          "difficulty": "Medium",
+          "priority": 2,
+          "season": "Q1"
+        }
+      ]
+    }
+  },
+  "priorityKeywords": [
+    {
+      "keyword": "biuro rachunkowe",
+      "targetUrl": "/finanse",
+      "volume": 22200,
+      "difficulty": "High",
+      "priority": 1
+    },
+    {
+      "keyword": "księgowość",
+      "targetUrl": "/finanse/uslugi/ksiegowosc",
+      "volume": 18100,
+      "difficulty": "High",
+      "priority": 1
+    },
+    {
+      "keyword": "księgowy",
+      "targetUrl": "/finanse",
+      "volume": 14800,
+      "difficulty": "High",
+      "priority": 1
+    },
+    {
+      "keyword": "usługi księgowe",
+      "targetUrl": "/finanse",
+      "volume": 8100,
+      "difficulty": "High",
+      "priority": 1
+    },
+    {
+      "keyword": "doradztwo podatkowe",
+      "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+      "volume": 6600,
+      "difficulty": "High",
+      "priority": 1
+    },
+    {
+      "keyword": "kadry i płace",
+      "targetUrl": "/finanse/uslugi/kadry-place",
+      "volume": 4400,
+      "difficulty": "Medium",
+      "priority": 1
+    },
+    {
+      "keyword": "rozliczenie roczne firmy",
+      "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+      "volume": 4400,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1"
+    },
+    {
+      "keyword": "obsługa księgowa",
+      "targetUrl": "/finanse",
+      "volume": 3600,
+      "difficulty": "Medium",
+      "priority": 1
+    },
+    {
+      "keyword": "biuro księgowe",
+      "targetUrl": "/finanse",
+      "volume": 2900,
+      "difficulty": "Medium",
+      "priority": 1
+    },
+    {
+      "keyword": "PIT dla firm",
+      "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+      "volume": 2900,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1-Q2"
+    },
+    {
+      "keyword": "sprawozdanie finansowe",
+      "targetUrl": "/finanse/uslugi/ksiegowosc",
+      "volume": 1600,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1"
+    },
+    {
+      "keyword": "biuro rachunkowe Warszawa",
+      "targetUrl": "/finanse/warszawa",
+      "volume": 1300,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Kraków",
+      "targetUrl": "/finanse/krakow",
+      "volume": 880,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Wrocław",
+      "targetUrl": "/finanse/wroclaw",
+      "volume": 720,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Gdańsk",
+      "targetUrl": "/finanse/gdansk",
+      "volume": 590,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Poznań",
+      "targetUrl": "/finanse/poznan",
+      "volume": 480,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Łódź",
+      "targetUrl": "/finanse/lodz",
+      "volume": 390,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Katowice",
+      "targetUrl": "/finanse/katowice",
+      "volume": 320,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Lublin",
+      "targetUrl": "/finanse/lublin",
+      "volume": 260,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Szczecin",
+      "targetUrl": "/finanse/szczecin",
+      "volume": 210,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Bydgoszcz",
+      "targetUrl": "/finanse/bydgoszcz",
+      "volume": 180,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Rzeszów",
+      "targetUrl": "/finanse/rzeszow",
+      "volume": 140,
+      "difficulty": "Low",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Rzeszów",
+      "targetUrl": "/finanse/rzeszow",
+      "volume": 110,
+      "difficulty": "Low",
+      "priority": 2
+    }
+  ],
+  "localKeywords": [
+    {
+      "keyword": "biuro rachunkowe Warszawa",
+      "targetUrl": "/finanse/warszawa",
+      "volume": 1300,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Kraków",
+      "targetUrl": "/finanse/krakow",
+      "volume": 880,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Wrocław",
+      "targetUrl": "/finanse/wroclaw",
+      "volume": 720,
+      "difficulty": "High",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Gdańsk",
+      "targetUrl": "/finanse/gdansk",
+      "volume": 590,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Poznań",
+      "targetUrl": "/finanse/poznan",
+      "volume": 480,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Łódź",
+      "targetUrl": "/finanse/lodz",
+      "volume": 390,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Katowice",
+      "targetUrl": "/finanse/katowice",
+      "volume": 320,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Lublin",
+      "targetUrl": "/finanse/lublin",
+      "volume": 260,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Szczecin",
+      "targetUrl": "/finanse/szczecin",
+      "volume": 210,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Bydgoszcz",
+      "targetUrl": "/finanse/bydgoszcz",
+      "volume": 180,
+      "difficulty": "Medium",
+      "priority": 2
+    },
+    {
+      "keyword": "biuro rachunkowe Rzeszów",
+      "targetUrl": "/finanse/rzeszow",
+      "volume": 140,
+      "difficulty": "Low",
+      "priority": 2
+    },
+    {
+      "keyword": "księgowość Rzeszów",
+      "targetUrl": "/finanse/rzeszow",
+      "volume": 110,
+      "difficulty": "Low",
+      "priority": 2
+    }
+  ],
+  "seasonalKeywords": [
+    {
+      "keyword": "rozliczenie roczne firmy",
+      "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+      "volume": 4400,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1"
+    },
+    {
+      "keyword": "PIT dla firm",
+      "targetUrl": "/finanse/uslugi/doradztwo-podatkowe",
+      "volume": 2900,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1-Q2"
+    },
+    {
+      "keyword": "sprawozdanie finansowe",
+      "targetUrl": "/finanse/uslugi/ksiegowosc",
+      "volume": 1600,
+      "difficulty": "Medium",
+      "priority": 2,
+      "season": "Q1"
+    }
+  ],
+  "recommendations": [
+    "Set up Google Search Console property verification",
+    "Consider subscribing to Senuto for Polish market analysis (199 PLN/month)",
+    "Implement weekly position tracking for Tier 1 keywords",
+    "Create monthly SEO performance reports",
+    "Monitor seasonal keywords performance during peak periods",
+    "Track local keyword performance for each city page",
+    "Set up conversion tracking for leads from organic search",
+    "Implement schema markup for better SERP visibility",
+    "Create content calendar based on seasonal keyword trends",
+    "Monitor competitor positions for key phrases"
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "senuto": {
+    "format": "CSV",
+    "columns": [
+      "Keyword",
+      "Target URL",
+      "Volume",
+      "Difficulty",
+      "Priority"
+    ],
+    "data": [
+      [
+        "biuro rachunkowe",
+        "https://bizneto.pl/finanse",
+        22200,
+        "High",
+        1
+      ],
+      [
+        "księgowość",
+        "https://bizneto.pl/finanse/uslugi/ksiegowosc",
+        18100,
+        "High",
+        1
+      ],
+      [
+        "usługi księgowe",
+        "https://bizneto.pl/finanse",
+        8100,
+        "High",
+        1
+      ],
+      [
+        "doradztwo podatkowe",
+        "https://bizneto.pl/finanse/uslugi/doradztwo-podatkowe",
+        6600,
+        "High",
+        1
+      ],
+      [
+        "księgowy",
+        "https://bizneto.pl/finanse",
+        14800,
+        "High",
+        1
+      ],
+      [
+        "kadry i płace",
+        "https://bizneto.pl/finanse/uslugi/kadry-place",
+        4400,
+        "Medium",
+        1
+      ],
+      [
+        "obsługa księgowa",
+        "https://bizneto.pl/finanse",
+        3600,
+        "Medium",
+        1
+      ],
+      [
+        "biuro księgowe",
+        "https://bizneto.pl/finanse",
+        2900,
+        "Medium",
+        1
+      ],
+      [
+        "biuro rachunkowe Warszawa",
+        "https://bizneto.pl/finanse/warszawa",
+        1300,
+        "High",
+        2
+      ],
+      [
+        "księgowość Kraków",
+        "https://bizneto.pl/finanse/krakow",
+        880,
+        "High",
+        2
+      ],
+      [
+        "biuro rachunkowe Wrocław",
+        "https://bizneto.pl/finanse/wroclaw",
+        720,
+        "High",
+        2
+      ],
+      [
+        "księgowość Gdańsk",
+        "https://bizneto.pl/finanse/gdansk",
+        590,
+        "Medium",
+        2
+      ],
+      [
+        "biuro rachunkowe Poznań",
+        "https://bizneto.pl/finanse/poznan",
+        480,
+        "Medium",
+        2
+      ],
+      [
+        "księgowość Łódź",
+        "https://bizneto.pl/finanse/lodz",
+        390,
+        "Medium",
+        2
+      ],
+      [
+        "biuro rachunkowe Katowice",
+        "https://bizneto.pl/finanse/katowice",
+        320,
+        "Medium",
+        2
+      ],
+      [
+        "księgowość Lublin",
+        "https://bizneto.pl/finanse/lublin",
+        260,
+        "Medium",
+        2
+      ],
+      [
+        "biuro rachunkowe Szczecin",
+        "https://bizneto.pl/finanse/szczecin",
+        210,
+        "Medium",
+        2
+      ],
+      [
+        "księgowość Bydgoszcz",
+        "https://bizneto.pl/finanse/bydgoszcz",
+        180,
+        "Medium",
+        2
+      ],
+      [
+        "biuro rachunkowe Rzeszów",
+        "https://bizneto.pl/finanse/rzeszow",
+        140,
+        "Low",
+        2
+      ],
+      [
+        "księgowość Rzeszów",
+        "https://bizneto.pl/finanse/rzeszow",
+        110,
+        "Low",
+        2
+      ],
+      [
+        "otwórz firmę",
+        "https://bizneto.pl/finanse/otworz-firme",
+        2400,
+        "Medium",
+        3
+      ],
+      [
+        "założenie działalności gospodarczej",
+        "https://bizneto.pl/finanse/otworz-firme",
+        1600,
+        "Medium",
+        3
+      ],
+      [
+        "księgowość online",
+        "https://bizneto.pl/finanse/uslugi/ksiegowosc",
+        1900,
+        "Medium",
+        3
+      ],
+      [
+        "kalkulator księgowy",
+        "https://bizneto.pl/finanse/kalkulator",
+        880,
+        "Low",
+        3
+      ],
+      [
+        "przeniesienie księgowości",
+        "https://bizneto.pl/finanse/przenies-ksiegowosc",
+        320,
+        "Low",
+        3
+      ],
+      [
+        "zmiana biura rachunkowego",
+        "https://bizneto.pl/finanse/przenies-ksiegowosc",
+        260,
+        "Low",
+        3
+      ],
+      [
+        "księgowość dla firm IT",
+        "https://bizneto.pl/finanse/uslugi/ksiegowosc",
+        210,
+        "Low",
+        3
+      ],
+      [
+        "księgowość e-commerce",
+        "https://bizneto.pl/finanse/uslugi/ksiegowosc",
+        170,
+        "Low",
+        3
+      ],
+      [
+        "najlepsze biuro rachunkowe",
+        "https://bizneto.pl/finanse",
+        590,
+        "High",
+        4
+      ],
+      [
+        "tanie usługi księgowe",
+        "https://bizneto.pl/finanse",
+        480,
+        "Medium",
+        4
+      ],
+      [
+        "ceny księgowości",
+        "https://bizneto.pl/finanse",
+        720,
+        "Medium",
+        4
+      ],
+      [
+        "ile kosztuje księgowy",
+        "https://bizneto.pl/finanse/kalkulator",
+        1300,
+        "Medium",
+        4
+      ],
+      [
+        "rozliczenie roczne firmy",
+        "https://bizneto.pl/finanse/uslugi/doradztwo-podatkowe",
+        4400,
+        "Medium",
+        2
+      ],
+      [
+        "PIT dla firm",
+        "https://bizneto.pl/finanse/uslugi/doradztwo-podatkowe",
+        2900,
+        "Medium",
+        2
+      ],
+      [
+        "sprawozdanie finansowe",
+        "https://bizneto.pl/finanse/uslugi/ksiegowosc",
+        1600,
+        "Medium",
+        2
+      ]
+    ]
+  },
+  "googleSearchConsole": {
+    "format": "Manual setup",
+    "queries": [
+      "biuro rachunkowe",
+      "księgowość",
+      "usługi księgowe",
+      "doradztwo podatkowe",
+      "księgowy",
+      "kadry i płace",
+      "obsługa księgowa",
+      "biuro księgowe",
+      "biuro rachunkowe Warszawa",
+      "księgowość Kraków",
+      "biuro rachunkowe Wrocław",
+      "księgowość Gdańsk",
+      "biuro rachunkowe Poznań",
+      "księgowość Łódź",
+      "biuro rachunkowe Katowice",
+      "księgowość Lublin",
+      "biuro rachunkowe Szczecin",
+      "księgowość Bydgoszcz",
+      "biuro rachunkowe Rzeszów",
+      "księgowość Rzeszów",
+      "otwórz firmę",
+      "założenie działalności gospodarczej",
+      "księgowość online",
+      "kalkulator księgowy",
+      "przeniesienie księgowości",
+      "zmiana biura rachunkowego",
+      "księgowość dla firm IT",
+      "księgowość e-commerce",
+      "najlepsze biuro rachunkowe",
+      "tanie usługi księgowe",
+      "ceny księgowości",
+      "ile kosztuje księgowy",
+      "rozliczenie roczne firmy",
+      "PIT dla firm",
+      "sprawozdanie finansowe"
+    ],
+    "pages": [
+      "/finanse",
+      "/finanse/uslugi/ksiegowosc",
+      "/finanse/uslugi/doradztwo-podatkowe",
+      "/finanse/uslugi/kadry-place",
+      "/finanse/warszawa",
+      "/finanse/krakow",
+      "/finanse/wroclaw",
+      "/finanse/gdansk",
+      "/finanse/poznan",
+      "/finanse/lodz",
+      "/finanse/katowice",
+      "/finanse/lublin",
+      "/finanse/szczecin",
+      "/finanse/bydgoszcz",
+      "/finanse/rzeszow",
+      "/finanse/otworz-firme",
+      "/finanse/kalkulator",
+      "/finanse/przenies-ksiegowosc"
+    ]
+  }
+}

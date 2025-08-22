@@ -21,6 +21,7 @@ interface IOfferSegment {
   desktopWidth?: number;
   desktopHeight?: number;
   extraMargin?: boolean;
+  link?: string;
 }
 
 const idToImageMap: Record<string, StaticImageData> = {
@@ -40,6 +41,7 @@ export default function OfferSegment({
   showMedia,
   mobileHeight,
   extraMargin,
+  link,
 }: IOfferSegment) {
   const LINK_TEXT = "Sprawdź";
   const image = idToImageMap[id!];
@@ -114,7 +116,7 @@ export default function OfferSegment({
         >
           {text}
         </p>
-        <Link className='w-full h-full' href={"/kontakt"}>
+        <Link className='w-full h-full' href={link || "/kontakt"}>
           <div
             onMouseEnter={() => setIsMouseOver(true)}
             onMouseLeave={() => setIsMouseOver(false)}

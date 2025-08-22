@@ -3,8 +3,13 @@
 import { useRef } from "react";
 import QuestionsMap from "./questionsMap";
 import useSectionVisibility from "@/utils/intersectionObserver";
+import { CityData } from "@/data/cities";
 
-export default function FAQ() {
+interface FAQProps {
+  cityData?: CityData;
+}
+
+export default function FAQ({ cityData }: FAQProps) {
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef);
 

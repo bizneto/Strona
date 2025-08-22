@@ -1,0 +1,196 @@
+{
+  "cities": [
+    {
+      "slug": "rzeszow",
+      "name": "Rzeszów",
+      "nameLocative": "Rzeszowie",
+      "voivodeship": "podkarpackie",
+      "voivodeshipLocative": "podkarpackim",
+      "population": 196000,
+      "description": "Rzeszów to dynamicznie rozwijające się miasto w południowo-wschodniej Polsce, centrum województwa podkarpackiego.",
+      "localKeywords": [
+        "księgowość Rzeszów",
+        "biuro rachunkowe Rzeszów", 
+        "księgowy Rzeszów",
+        "doradztwo podatkowe Rzeszów"
+      ],
+      "nearbyAreas": [
+        "Jasionka",
+        "Boguchwała", 
+        "Tyczyn",
+        "Głogów Małopolski",
+        "Kolbuszowa"
+      ],
+      "priority": 1,
+      "active": true
+    },
+    {
+      "slug": "krakow",
+      "name": "Kraków",
+      "nameLocative": "Krakowie",
+      "voivodeship": "małopolskie",
+      "voivodeshipLocative": "małopolskim",
+      "population": 780000,
+      "description": "Kraków to historyczna stolica Polski i jedno z najważniejszych centrów biznesowych w kraju.",
+      "localKeywords": [
+        "księgowość Kraków",
+        "biuro rachunkowe Kraków",
+        "księgowy Kraków", 
+        "doradztwo podatkowe Kraków"
+      ],
+      "nearbyAreas": [
+        "Wieliczka",
+        "Skawina",
+        "Niepołomice",
+        "Zabierzów",
+        "Michałowice"
+      ],
+      "priority": 2,
+      "active": true
+    },
+    {
+      "slug": "warszawa",
+      "name": "Warszawa",
+      "nameLocative": "Warszawie",
+      "voivodeship": "mazowieckie",
+      "voivodeshipLocative": "mazowieckim",
+      "population": 1800000,
+      "description": "Warszawa to stolica Polski i największe centrum finansowo-biznesowe w kraju.",
+      "localKeywords": [
+        "księgowość Warszawa",
+        "biuro rachunkowe Warszawa",
+        "księgowy Warszawa",
+        "doradztwo podatkowe Warszawa"
+      ],
+      "nearbyAreas": [
+        "Piaseczno",
+        "Pruszków",
+        "Legionowo",
+        "Marki",
+        "Ożarów Mazowiecki"
+      ],
+      "priority": 3,
+      "active": true
+    },
+    {
+      "slug": "gdansk",
+      "name": "Gdańsk",
+      "nameLocative": "Gdańsku",
+      "voivodeship": "pomorskie",
+      "voivodeshipLocative": "pomorskim",
+      "population": 470000,
+      "description": "Gdańsk to największe miasto północnej Polski i ważny port nad Morzem Bałtyckim.",
+      "localKeywords": [
+        "księgowość Gdańsk",
+        "biuro rachunkowe Gdańsk",
+        "księgowy Gdańsk",
+        "doradztwo podatkowe Gdańsk"
+      ],
+      "nearbyAreas": [
+        "Sopot",
+        "Gdynia",
+        "Pruszcz Gdański",
+        "Rumia",
+        "Reda"
+      ],
+      "priority": 4,
+      "active": true
+    },
+    {
+      "slug": "wroclaw",
+      "name": "Wrocław",
+      "nameLocative": "Wrocławiu",
+      "voivodeship": "dolnośląskie",
+      "voivodeshipLocative": "dolnośląskim",
+      "population": 640000,
+      "description": "Wrocław to stolica Dolnego Śląska i jedno z najprężniej rozwijających się miast w Polsce.",
+      "localKeywords": [
+        "księgowość Wrocław",
+        "biuro rachunkowe Wrocław",
+        "księgowy Wrocław",
+        "doradztwo podatkowe Wrocław"
+      ],
+      "nearbyAreas": [
+        "Oława",
+        "Trzebnica",
+        "Kąty Wrocławskie",
+        "Siechnice",
+        "Żórawina"
+      ],
+      "priority": 5,
+      "active": true
+    },
+    {
+      "slug": "poznan",
+      "name": "Poznań",
+      "nameLocative": "Poznaniu",
+      "voivodeship": "wielkopolskie",
+      "voivodeshipLocative": "wielkopolskim",
+      "population": 540000,
+      "description": "Poznań to stolica Wielkopolski i ważny ośrodek gospodarczy zachodniej Polski.",
+      "localKeywords": [
+        "księgowość Poznań",
+        "biuro rachunkowe Poznań",
+        "księgowy Poznań",
+        "doradztwo podatkowe Poznań"
+      ],
+      "nearbyAreas": [
+        "Swarzędz",
+        "Luboń",
+        "Puszczykowo",
+        "Tarnowo Podgórne",
+        "Dopiewo"
+      ],
+      "priority": 6,
+      "active": true
+    },
+    {
+      "slug": "lodz",
+      "name": "Łódź",
+      "nameLocative": "Łodzi",
+      "voivodeship": "łódzkie",
+      "voivodeshipLocative": "łódzkim",
+      "population": 680000,
+      "description": "Łódź to trzecie co do wielkości miasto w Polsce i ważny ośrodek przemysłowy.",
+      "localKeywords": [
+        "księgowość Łódź",
+        "biuro rachunkowe Łódź",
+        "księgowy Łódź",
+        "doradztwo podatkowe Łódź"
+      ],
+      "nearbyAreas": [
+        "Pabianice",
+        "Zgierz",
+        "Konstantynów Łódzki",
+        "Aleksandrów Łódzki",
+        "Ozorków"
+      ],
+      "priority": 7,
+      "active": true
+    },
+    {
+      "slug": "katowice",
+      "name": "Katowice",
+      "nameLocative": "Katowicach",
+      "voivodeship": "śląskie",
+      "voivodeshipLocative": "śląskim",
+      "population": 290000,
+      "description": "Katowice to stolica województwa śląskiego i centrum aglomeracji górnośląskiej.",
+      "localKeywords": [
+        "księgowość Katowice",
+        "biuro rachunkowe Katowice",
+        "księgowy Katowice",
+        "doradztwo podatkowe Katowice"
+      ],
+      "nearbyAreas": [
+        "Chorzów",
+        "Sosnowiec",
+        "Gliwice",
+        "Zabrze",
+        "Bytom"
+      ],
+      "priority": 8,
+      "active": true
+    }
+  ]
+}

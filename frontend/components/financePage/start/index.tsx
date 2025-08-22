@@ -4,23 +4,30 @@ import { useRef } from "react";
 import useSectionVisibility from "@/utils/intersectionObserver";
 import useGlobalContext from "@/hooks/useGlobalContext";
 import ButtonWithArrow from "@/components/shared/buttonWithArrow";
+import { CityData, getCityWithPreposition } from "@/data/cities";
 
-export default function Start() {
+interface StartProps {
+  cityData?: CityData;
+}
+
+export default function Start({ cityData }: StartProps) {
   const { isMobile } = useGlobalContext();
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef, 1);
-  const SECTION_TITLE = `Start`;
+  const SECTION_TITLE = cityData ? `Start ${getCityWithPreposition(cityData)}` : `Start`;
   const BTN_TEXT = "Zaczynajmy";
   const DATA = [
     {
       header: "Otwórz firmę!",
       article:
         "Nie wiesz jak otworzyć firmę? Nie chcesz zajmować się formalnościami? Przeprowadzimy Cię przez cały proces i doradzimy na każdym etapie.",
+      link: "/finanse/otworz-firme",
     },
     {
       header: "Przenieś księgowość",
       article: "Potrzebujesz zmienić biuro rachunkowe?",
       additionalText: "Czekamy na Ciebie i jesteśmy gotowi do współpracy.",
+      link: "/finanse/przenies-ksiegowosc",
     },
   ];
 
@@ -44,7 +51,7 @@ export default function Start() {
         <div
           className={`w-full md:w-[90%]  md:flex  lg:justify-between 2xl:justify-normal 2xl:gap-8`}
         >
-          {DATA.map(({ header, article, additionalText }, index) => (
+          {DATA.map(({ header, article, additionalText, link }, index) => (
             <div
               key={index}
               className={`h-full relative 
@@ -84,6 +91,7 @@ export default function Start() {
                     text={BTN_TEXT}
                     color={"#FF3C50"}
                     arrowColor='red'
+                    altHref={link}
                   />
                 </span>
               </div>

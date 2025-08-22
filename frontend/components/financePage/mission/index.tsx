@@ -2,16 +2,24 @@
 
 import useSectionVisibility from "@/utils/intersectionObserver";
 import { useEffect, useRef, useState } from "react";
+import { CityData, getCityWithPreposition } from "@/data/cities";
 
-export default function Mission() {
+interface MissionProps {
+  cityData?: CityData;
+}
+
+export default function Mission({ cityData }: MissionProps) {
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef, 0.6);
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const SECTION_TITLE = "Misja";
-  const HEADER_TEXT = "Kształtujemy przyszłość biznesu";
-  const ARTICLE_TEXT =
-    "Zapewniamy kompleksową obsługę księgową, by wspierać szybki rozwój biznesów poprzez indywidualne podejście do każdego klienta. Nasza wizja skupia się na budowaniu trwałych relacji biznesowych opartych na zaufaniu, solidności oraz wysokim standardzie obsługi.";
+  const HEADER_TEXT = cityData
+    ? `Kształtujemy przyszłość biznesu ${getCityWithPreposition(cityData)}`
+    : "Kształtujemy przyszłość biznesu";
+  const ARTICLE_TEXT = cityData
+    ? `Zapewniamy kompleksową obsługę księgową ${getCityWithPreposition(cityData)} i województwie ${cityData.voivodeshipLocative}, by wspierać szybki rozwój lokalnych biznesów poprzez indywidualne podejście do każdego klienta. Nasza wizja skupia się na budowaniu trwałych relacji biznesowych opartych na zaufaniu, solidności oraz wysokim standardzie obsługi.`
+    : "Zapewniamy kompleksową obsługę księgową, by wspierać szybki rozwój biznesów poprzez indywidualne podejście do każdego klienta. Nasza wizja skupia się na budowaniu trwałych relacji biznesowych opartych na zaufaniu, solidności oraz wysokim standardzie obsługi.";
   const DATA = [
     { top: "20", bottom: "Lat doświadczenia" },
     { top: "+300", bottom: "Zadowolonych klientów" },

@@ -1,66 +1,42 @@
-import ArticlesList from "../highlightedArticle";
-import fetchAllArticles from "@/utils/articles";
+import { blogAPI } from "@/lib/blog-api";
+import ArticlesList from "../articlesList";
+import HighlightedArticle from "../highlightedArticle";
 
 export default async function Articles() {
-  const { data } = await fetchAllArticles();
+  try {
+    // Fetch latest posts from EspoCRM
+    const latestPosts = await blogAPI.getLatestPosts(10);
+    const featuredPosts = await blogAPI.getFeaturedPosts(1);
 
-  const articlesList = data.map(
-    (article: {
-      id: number;
-      attributes: {
-        Page: {
-          __component: string;
-          title?: string;
-          category?: string;
-          admission?: [];
-          articleHeader?: string;
-          articleAdmission?: [];
-          articleMain?: [];
-          text?: [];
-          image?: {
-            data: {
-              attributes: {
-                width: number;
-                height: number;
-                url: string;
-              };
-            };
-          };
-        }[];
-        createdAt: any
-        updatedAt: any;
-        publishedAt: any;
-      };
-    }) => {
-      const headerComponent = article.attributes.Page.find(
-        (component) => component.__component === "blog-components.header"
-      );
-      const thumbnailComponent = article.attributes.Page.find(
-        (component) => component.__component === "blog-components.thumbnail"
-      );
-      const admissonComponent = article.attributes.Page.find(
-        (component) => component.__component === "blog-components.admission"
-      );
+    const highlightedPost = featuredPosts.length > 0 ? featuredPosts[0] : latestPosts[0];
+    const remainingPosts = featuredPosts.length > 0
+      ? latestPosts.filter(post => post.id !== highlightedPost?.id)
+      : latestPosts.slice(1);
 
-      return {
-        id: article.id,
-        title: headerComponent?.title || "",
-        category: headerComponent?.category || "",
-        admission: admissonComponent?.text || [],
-        articleHeader: headerComponent?.articleHeader || "",
-        createdAt: article.attributes.createdAt,
-        updatedAt: article.attributes.updatedAt,
-        publishedAt: article.attributes.publishedAt,
-        articleAdmission: headerComponent?.articleAdmission || [],
-        articleMain: headerComponent?.articleMain || [],
-        thumbnail: thumbnailComponent?.image || null,
-      };
-    }
-  );
+    return (
+      <section className='w-full flex flex-col items-center py-[5%]'>
+        <div className='w-10/12 md:w-[89%] 2xl:w-[1440px] flex flex-col'>
+          {highlightedPost && <HighlightedArticle post={highlightedPost} />}
+          <ArticlesList posts={remainingPosts} />
+        </div>
+      </section>
+    );
+  } catch (error) {
+    console.error('Error loading blog articles:', error);
 
-  return (
-    <main>
-      <ArticlesList articlesList={articlesList} />
-    </main>
-  );
+    return (
+      <section className='w-full flex flex-col items-center py-[5%]'>
+        <div className='w-10/12 md:w-[89%] 2xl:w-[1440px] flex flex-col'>
+          <div className="text-center py-12">
+            <h3 className="text-xl font-semibold text-gray-600 mb-4">
+              Brak artykułów do wyświetlenia
+            </h3>
+            <p className="text-gray-500">
+              Wkrótce pojawią się tutaj interesujące artykuły o księgowości.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 }

@@ -7,10 +7,10 @@ export function deleteSeparator(arg: string): string {
 }
 
 export function imageUrl(url: string) {
-  return `http://bizneto.programero.pl${url}`;
+  return `${process.env.STRAPI_URL || 'http://localhost:1337'}${url}`;
 }
 export function localImageUrl(url: string) {
-  return `http://127.0.0.1:1337${url}`;
+  return `${process.env.STRAPI_URL || 'http://localhost:1337'}${url}`;
 }
 
 export function generateValidID() {

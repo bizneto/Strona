@@ -9,9 +9,43 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bizneto",
+  title: "Bizneto - Profesjonalne Usługi Księgowe i Digital Marketing",
   description:
-    "Odkryj kompleksową gamę usług księgowych i doradczych oferowanych przez Bizneto.Pomagamy firmom osiągać sukces finansowy.",
+    "Odkryj kompleksową gamę usług księgowych i doradczych oferowanych przez Bizneto. Pomagamy firmom osiągać sukces finansowy. Księgowość, doradztwo podatkowe, web design, branding.",
+  keywords: "bizneto, księgowość, usługi księgowe, doradztwo podatkowe, web design, branding, digital marketing",
+  authors: [{ name: "Bizneto Sp. z o.o." }],
+  creator: "Bizneto Sp. z o.o.",
+  publisher: "Bizneto Sp. z o.o.",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://bizneto.pl'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Bizneto - Profesjonalne Usługi Księgowe i Digital Marketing",
+    description: "Kompleksowe usługi księgowe, doradztwo podatkowe, web design i branding. Zaufaj ekspertom z 20-letnim doświadczeniem.",
+    url: 'https://bizneto.pl',
+    siteName: 'Bizneto',
+    locale: 'pl_PL',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 const GoogleAnalyticsKey: string = process.env.GOOGLE_ANALYTICS_KEY ?? "";

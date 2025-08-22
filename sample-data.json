@@ -1,0 +1,89 @@
+{
+  "caseStudy1": {
+    "data": {
+      "Page": [
+        {
+          "__component": "component.header",
+          "title": "Redesign strony internetowej dla TechCorp",
+          "client": "TechCorp Sp. z o.o.",
+          "date": "2024-01-15",
+          "services": "Web Design, UX/UI, Frontend Development",
+          "industry": "Technologia",
+          "shortDescription": "Kompleksowy redesign strony internetowej firmy technologicznej z fokusem na poprawę konwersji i doświadczenia użytkownika."
+        },
+        {
+          "__component": "component.thumbnail"
+        },
+        {
+          "__component": "component.mini-thumbnail"
+        },
+        {
+          "__component": "component.intro",
+          "content": "TechCorp to dynamicznie rozwijająca się firma technologiczna, która potrzebowała nowoczesnej strony internetowej odzwierciedlającej ich innowacyjne podejście do biznesu."
+        },
+        {
+          "__component": "component.goal",
+          "content": "Głównym celem projektu było zwiększenie konwersji o 40% oraz poprawa doświadczenia użytkownika na urządzeniach mobilnych."
+        }
+      ]
+    }
+  },
+  "caseStudy2": {
+    "data": {
+      "Page": [
+        {
+          "__component": "component.header",
+          "title": "Aplikacja mobilna dla EcoShop",
+          "client": "EcoShop",
+          "date": "2024-02-20",
+          "services": "Mobile App Design, Branding, UX Research",
+          "industry": "E-commerce",
+          "shortDescription": "Stworzenie aplikacji mobilnej dla sklepu ekologicznego z intuicyjnym interfejsem i funkcjami społecznościowymi."
+        },
+        {
+          "__component": "component.thumbnail"
+        },
+        {
+          "__component": "component.mini-thumbnail"
+        },
+        {
+          "__component": "component.intro",
+          "content": "EcoShop to sklep internetowy z produktami ekologicznymi, który chciał rozszerzyć swoją obecność o aplikację mobilną."
+        },
+        {
+          "__component": "component.goal",
+          "content": "Celem było stworzenie aplikacji, która zwiększy zaangażowanie klientów i ułatwi zakupy produktów ekologicznych."
+        }
+      ]
+    }
+  },
+  "caseStudy3": {
+    "data": {
+      "Page": [
+        {
+          "__component": "component.header",
+          "title": "Rebranding dla StartupHub",
+          "client": "StartupHub",
+          "date": "2024-03-10",
+          "services": "Branding, Logo Design, Brand Guidelines",
+          "industry": "Startup",
+          "shortDescription": "Kompleksowy rebranding inkubatora startupów z nową identyfikacją wizualną i strategią komunikacji."
+        },
+        {
+          "__component": "component.thumbnail"
+        },
+        {
+          "__component": "component.mini-thumbnail"
+        },
+        {
+          "__component": "component.intro",
+          "content": "StartupHub to inkubator startupów, który potrzebował świeżej identyfikacji wizualnej odpowiadającej dynamicznemu środowisku startupowemu."
+        },
+        {
+          "__component": "component.goal",
+          "content": "Stworzenie spójnej identyfikacji wizualnej, która przyciągnie młode firmy i inwestorów."
+        }
+      ]
+    }
+  }
+}

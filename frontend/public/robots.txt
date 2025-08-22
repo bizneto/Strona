@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bizneto.pl/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all search engines to access important pages
+Allow: /finanse
+Allow: /finanse/uslugi
+Allow: /finanse/*/
+Allow: /kontakt
+
+# Block admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Block common bot traps
+Disallow: /*?*
+Disallow: /*#*

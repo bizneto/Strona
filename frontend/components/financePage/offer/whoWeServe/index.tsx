@@ -11,8 +11,13 @@ import OfferSegment from "../offerSegment";
 import SliderButtons from "../sliderButtons";
 import { useRef } from "react";
 import useSectionVisibility from "@/utils/intersectionObserver";
+import { CityData } from "@/data/cities";
 
-export default function WhoWeServe() {
+interface WhoWeServeProps {
+  cityData?: CityData;
+}
+
+export default function WhoWeServe({ cityData }: WhoWeServeProps) {
   const sectionRef = useRef(null);
   const isSectionVisible = useSectionVisibility(sectionRef, 0.7);
   const { isMobile } = useGlobalContext();

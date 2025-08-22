@@ -1,0 +1,256 @@
+{
+  "lastUpdate": "2025-01-23",
+  "version": "1.0",
+  "description": "Konfiguracja cen bazowych dla kalkulatora usług księgowych",
+  
+  "basePrices": {
+    "companyTypes": {
+      "sole-proprietorship": {
+        "name": "Działalność gospodarcza",
+        "multiplier": 1.0,
+        "basePrice": 200,
+        "defaultAccounting": "revenue-expense-book"
+      },
+      "limited-company": {
+        "name": "Spółka z o.o.",
+        "multiplier": 1.5,
+        "basePrice": 400,
+        "defaultAccounting": "accounting-books"
+      },
+      "partnership": {
+        "name": "Spółka cywilna",
+        "multiplier": 1.2,
+        "basePrice": 250,
+        "defaultAccounting": "revenue-expense-book"
+      },
+      "joint-stock-company": {
+        "name": "Spółka akcyjna",
+        "multiplier": 2.0,
+        "basePrice": 500,
+        "defaultAccounting": "accounting-books"
+      },
+      "simple-joint-stock": {
+        "name": "Prosta spółka akcyjna",
+        "multiplier": 1.8,
+        "basePrice": 450,
+        "defaultAccounting": "accounting-books"
+      },
+      "general-partnership": {
+        "name": "Spółka jawna",
+        "multiplier": 1.3,
+        "basePrice": 300,
+        "defaultAccounting": "revenue-expense-book"
+      },
+      "limited-partnership": {
+        "name": "Spółka komandytowa",
+        "multiplier": 1.6,
+        "basePrice": 350,
+        "defaultAccounting": "accounting-books"
+      },
+      "limited-joint-stock": {
+        "name": "Spółka komandytowo-akcyjna",
+        "multiplier": 1.9,
+        "basePrice": 480,
+        "defaultAccounting": "accounting-books"
+      },
+      "professional-partnership": {
+        "name": "Spółka partnerska",
+        "multiplier": 1.4,
+        "basePrice": 320,
+        "defaultAccounting": "revenue-expense-book"
+      },
+      "foundation": {
+        "name": "Fundacja/stowarzyszenie",
+        "multiplier": 1.3,
+        "basePrice": 350,
+        "defaultAccounting": "accounting-books"
+      }
+    },
+    
+    "accountingTypes": {
+      "tax-card": {
+        "name": "Karta podatkowa",
+        "basePrice": 150,
+        "complexity": 0.5,
+        "description": "Najprostsza forma - tylko dla określonych działalności"
+      },
+      "revenue-expense-book": {
+        "name": "Książka przychodów i rozchodów",
+        "basePrice": 300,
+        "complexity": 0.7,
+        "description": "Standardowa księgowość dla działalności gospodarczej"
+      },
+      "accounting-books": {
+        "name": "Księgi rachunkowe",
+        "basePrice": 600,
+        "complexity": 1.0,
+        "description": "Pełna księgowość dla spółek kapitałowych"
+      },
+      "lump-sum": {
+        "name": "Ryczałt ewidencjonowany",
+        "basePrice": 200,
+        "complexity": 0.6,
+        "description": "Uproszczona forma dla małych firm"
+      }
+    },
+    
+    "documentVolume": {
+      "1-10": {
+        "name": "1-10 dokumentów",
+        "pricePerDocument": 8,
+        "basePrice": 80
+      },
+      "11-20": {
+        "name": "11-20 dokumentów",
+        "pricePerDocument": 7,
+        "basePrice": 140
+      },
+      "21-40": {
+        "name": "21-40 dokumentów",
+        "pricePerDocument": 6,
+        "basePrice": 240
+      },
+      "41-70": {
+        "name": "41-70 dokumentów",
+        "pricePerDocument": 5.5,
+        "basePrice": 385
+      },
+      "71-100": {
+        "name": "71-100 dokumentów",
+        "pricePerDocument": 5,
+        "basePrice": 500
+      },
+      "101-130": {
+        "name": "101-130 dokumentów",
+        "pricePerDocument": 4.5,
+        "basePrice": 585
+      },
+      "131-160": {
+        "name": "131-160 dokumentów",
+        "pricePerDocument": 4,
+        "basePrice": 640
+      },
+      "161-190": {
+        "name": "161-190 dokumentów",
+        "pricePerDocument": 3.8,
+        "basePrice": 722
+      },
+      "191-220": {
+        "name": "191-220 dokumentów",
+        "pricePerDocument": 3.5,
+        "basePrice": 770
+      },
+      "221-250": {
+        "name": "221-250 dokumentów",
+        "pricePerDocument": 3.2,
+        "basePrice": 800
+      }
+    },
+    
+    "employeesPricing": {
+      "employment-contract": {
+        "name": "Umowa o pracę",
+        "pricePerEmployee": 45,
+        "description": "Pełna obsługa kadrowo-płacowa"
+      },
+      "commission-contract": {
+        "name": "Umowa zlecenie",
+        "pricePerEmployee": 25,
+        "description": "Obsługa umów zlecenie"
+      }
+    },
+    
+    "additionalServices": {
+      "vat-payer": {
+        "name": "Płatnik VAT",
+        "monthlyPrice": 120,
+        "description": "Obsługa deklaracji VAT"
+      },
+      "foreign-trade": {
+        "name": "Handel zagraniczny",
+        "monthlyPrice": 200,
+        "description": "Obsługa transakcji zagranicznych"
+      },
+      "tax-advisory": {
+        "name": "Doradztwo podatkowe",
+        "hourlyRate": 250,
+        "estimatedHours": 2,
+        "description": "Konsultacje podatkowe - 250 PLN/godz"
+      },
+      "business-consulting": {
+        "name": "Konsulting biznesowy",
+        "hourlyRate": 300,
+        "estimatedHours": 3,
+        "description": "Doradztwo strategiczne - 300 PLN/godz"
+      },
+      "financial-audit": {
+        "name": "Audyt finansowy",
+        "hourlyRate": 350,
+        "estimatedHours": 8,
+        "description": "Przegląd finansowy - 350 PLN/godz"
+      },
+      "legal-support": {
+        "name": "Obsługa prawna",
+        "hourlyRate": 400,
+        "estimatedHours": 2,
+        "description": "Wsparcie prawne - 400 PLN/godz"
+      }
+    }
+  },
+  
+  "regionalMultipliers": {
+    "warsaw": 1.3,
+    "krakow": 1.2,
+    "gdansk": 1.15,
+    "wroclaw": 1.15,
+    "poznan": 1.1,
+    "katowice": 1.1,
+    "lodz": 1.05,
+    "szczecin": 1.0,
+    "bydgoszcz": 1.0,
+    "lublin": 1.0,
+    "default": 0.95
+  },
+  
+  "industryMultipliers": {
+    "construction": 1.25,
+    "healthcare": 1.2,
+    "finance": 1.15,
+    "manufacturing": 1.1,
+    "real-estate": 1.1,
+    "transport": 1.05,
+    "retail": 1.0,
+    "wholesale": 1.0,
+    "services": 1.0,
+    "it": 0.95,
+    "education": 0.9,
+    "agriculture": 0.9,
+    "hospitality": 1.0,
+    "other": 1.0
+  },
+  
+  "discounts": {
+    "annual-payment": {
+      "name": "Płatność roczna",
+      "discount": 0.1,
+      "description": "10% rabatu za płatność roczną z góry"
+    },
+    "startup": {
+      "name": "Firma rozpoczynająca",
+      "discount": 0.15,
+      "description": "15% rabatu dla firm w pierwszym roku działalności",
+      "conditions": "Pierwsze 12 miesięcy działalności"
+    },
+    "volume": {
+      "name": "Rabat wolumenowy",
+      "discount": 0.05,
+      "description": "5% rabatu dla firm z dużym wolumenem",
+      "conditions": "Powyżej 200 dokumentów miesięcznie"
+    }
+  },
+  
+  "priceRanges": {
+    "tolerance": 0.2,
+    "description": "Ceny mogą różnić się o ±20% w zależności od specyfiki firmy i lokalizacji"
+  }
+}

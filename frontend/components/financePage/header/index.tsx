@@ -3,11 +3,41 @@ import HeaderNavbar from "./headerNavbar";
 import HeaderImage from "./headerImage";
 import HeaderDesktopMenu from "./headerDesktopMenu";
 import { SSRMobileDetection } from "@/utils/ssrDeviceDetection";
+import { CityData, getCityWithPreposition } from "@/data/cities";
 
-export default async function Header() {
+interface BlogPostData {
+  title: string;
+  description?: string;
+  excerpt?: string;
+  category: string;
+  headerimageId?: string;
+  publishedAt?: string;
+  createdAt?: string;
+}
+
+interface HeaderProps {
+  cityData?: CityData;
+  blogPost?: BlogPostData;
+}
+
+export default async function Header({ cityData, blogPost }: HeaderProps) {
   const isMobile = await SSRMobileDetection();
-  const MAIN_TEXT = "Dbamy o finanse Twojej firmy.";
-  const SUB_TEXT = "Wszystko w jednym miejscu";
+
+  let MAIN_TEXT, SUB_TEXT;
+
+  if (blogPost) {
+    // Dla artykułu bloga
+    MAIN_TEXT = blogPost.title;
+    SUB_TEXT = blogPost.description || blogPost.excerpt || "Przeczytaj nasz najnowszy artykuł z bloga finansowego";
+  } else if (cityData) {
+    // Dla stron miast
+    MAIN_TEXT = `Biuro Rachunkowe ${cityData.name} | Księgowość`;
+    SUB_TEXT = `Profesjonalne usługi księgowe ${getCityWithPreposition(cityData)} | Doradztwo podatkowe | 20 lat doświadczenia`;
+  } else {
+    // Dla strony głównej
+    MAIN_TEXT = "Biuro Rachunkowe | Księgowość | Usługi Księgowe";
+    SUB_TEXT = "Profesjonalne usługi księgowe | Doradztwo podatkowe | 20 lat doświadczenia";
+  }
   
   return (
     <header
@@ -16,7 +46,7 @@ export default async function Header() {
         !isMobile && "bg-gradient1 "
       } relative flex flex-col overflow-hidden justify-between  items-baseline  text-white `}
     >
-      <HeaderImage />
+      <HeaderImage blogPostImageId={blogPost?.headerimageId} />
       <span className='w-full'>
         <HeaderNavbar />
         <HeaderDesktopMenu />
@@ -36,9 +66,14 @@ export default async function Header() {
             >
               {SUB_TEXT}
             </h6>
+            {blogPost && (blogPost.publishedAt || blogPost.createdAt) && (
+              <div className="text-white/80 mt-4 text-sm md:text-base">
+                Opublikowano: {new Date(blogPost.publishedAt || blogPost.createdAt).toLocaleDateString('pl-PL')}
+              </div>
+            )}
           </div>
         </div>
-        <HeaderCarousel />
+        <HeaderCarousel blogPost={blogPost} />
       </div>
     </header>
   );

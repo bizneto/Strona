@@ -8,9 +8,11 @@ import Image from "next/image";
 import useGlobalContext from "@/hooks/useGlobalContext";
 import Link from "next/link";
 import rzetelnaFirma from "@/public/svgs/rzetelnaFirma.svg";
+import { getCitiesForFooter } from "@/data/cities";
 
 export default function FooterAlt() {
   const { isMobile } = useGlobalContext();
+  const citiesForFooter = getCitiesForFooter();
   const WORKING_HOURS_STR = "Godziny otwarcia:";
   const CONTACT_DATA = [
     {
@@ -117,6 +119,100 @@ export default function FooterAlt() {
                 </div>
               )
             )}
+
+            {/* Sekcja z usługami */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-medium text-[16px] leading-[22.4px]">
+                Nasze usługi
+              </h3>
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/finanse/uslugi/ksiegowosc"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Księgowość
+                </Link>
+                <Link
+                  href="/finanse/uslugi/doradztwo-podatkowe"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Doradztwo Podatkowe
+                </Link>
+                <Link
+                  href="/finanse/uslugi/kadry-place"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Kadry i Płace
+                </Link>
+                <Link
+                  href="/finanse/uslugi/konsulting-biznesowy"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Konsulting Biznesowy
+                </Link>
+                <Link
+                  href="/finanse/uslugi/audyt-finansowy"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Audyt Finansowy
+                </Link>
+                <Link
+                  href="/finanse/uslugi/obsluga-prawna"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Obsługa Prawna
+                </Link>
+                <Link
+                  href="/finanse/otworz-firme"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Otwórz Firmę
+                </Link>
+                <Link
+                  href="/finanse/przenies-ksiegowosc"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Przenieś Księgowość
+                </Link>
+                <Link
+                  href="/finanse/ceny"
+                  className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                >
+                  Cennik Usług
+                </Link>
+                <Link
+                  href="/finanse/uslugi"
+                  className="text-[12px] leading-[14.63px] text-blue-400 hover:text-blue-300 transition-colors mt-2"
+                >
+                  Zobacz wszystkie usługi →
+                </Link>
+              </div>
+            </div>
+
+            {/* Sekcja z miastami */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-medium text-[16px] leading-[22.4px]">
+                Nasze miasta
+              </h3>
+              <div className="flex flex-col gap-3">
+                {citiesForFooter.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/finanse/${city.slug}`}
+                    className="text-[12px] leading-[14.63px] hover:text-blue-400 transition-colors"
+                  >
+                    Księgowość {city.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/finanse/miasta"
+                  className="text-[12px] leading-[14.63px] text-blue-400 hover:text-blue-300 transition-colors mt-2"
+                >
+                  Zobacz wszystkie miasta →
+                </Link>
+              </div>
+            </div>
+
             <div>
               <div className={`flex gap-12 md:gap-11`}>
                 {LOGOS.map((logo, index) => (

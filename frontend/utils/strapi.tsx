@@ -29,7 +29,7 @@ class Strapi {
 
   private async initialize() {
     this.apiKey = process.env.STRAPI_KEY;
-    this.urlPrefix = "http://bizneto.programero.pl/api";
+    this.urlPrefix = `${process.env.STRAPI_URL || 'http://localhost:1337'}/api`;
     this.conversationsUrl = `${this.urlPrefix}/conversation-${this.page + "s"}`;
     this.headers = {
       "Content-type": "application/json",
