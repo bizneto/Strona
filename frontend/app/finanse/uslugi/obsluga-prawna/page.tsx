@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -136,7 +136,7 @@ export default function LegalServicePage() {
         header='Potrzebujesz wsparcia prawnego?'
         text='Skontaktuj się z naszymi radcami prawnymi i zabezpiecz swoją firmę przed ryzykiem prawnym.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij współpracę prawną'
         text='Zaufaj naszym doświadczonym prawnikom i zapewnij swojej firmie kompleksową obsługę prawną.'

@@ -1,5 +1,4 @@
 "use server";
-import "server-only";
 
 import { streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
@@ -13,7 +12,6 @@ export interface Message {
 }
 
 export async function continueConversation(history: Message[], page: TPage) {
-  "use server";
   const strapiService = await getStrapiInstance(page);
 
   const stream = createStreamableValue();

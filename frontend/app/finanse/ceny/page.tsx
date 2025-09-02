@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 
 export const metadata: Metadata = {
   title: "Cennik Usług Księgowych | Ceny Księgowości | Biuro Rachunkowe - Bizneto",
@@ -252,7 +252,7 @@ export default function PricingPage() {
         text='Skorzystaj z naszego kalkulatora online lub skontaktuj się z nami po bezpłatną konsultację cenową.'
       />
 
-      <FAQ customFAQ={pricingFAQ} />
+      <FAQ FAQ={pricingFAQ.map(item => ({ Question: item.question, Answer: item.answer }))} />
 
       <TextWithBackground
         header='Tanie usługi księgowe wysokiej jakości'

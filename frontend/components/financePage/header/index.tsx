@@ -68,7 +68,7 @@ export default async function Header({ cityData, blogPost }: HeaderProps) {
             </h6>
             {blogPost && (blogPost.publishedAt || blogPost.createdAt) && (
               <div className="text-white/80 mt-4 text-sm md:text-base">
-                Opublikowano: {new Date(blogPost.publishedAt || blogPost.createdAt).toLocaleDateString('pl-PL')}
+                Opublikowano: {new Date(blogPost.publishedAt || blogPost.createdAt || '').toLocaleDateString('pl-PL')}
               </div>
             )}
           </div>

@@ -173,19 +173,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 ))}
               </div>
             </div>
-          )}
-
-          {/* Back to Blog */}
-          <div className="mt-12 text-center">
-              <Link
-                href="/finanse/blog"
-                className="bg-[#FF3C50] text-white px-8 py-4 rounded-lg hover:bg-[#e63946] transition-colors font-semibold"
-              >
-                Zobacz więcej artykułów
-              </Link>
-            </div>
           </div>
         )}
+
+        {/* Back to Blog */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/finanse/blog"
+            className="bg-[#FF3C50] text-white px-8 py-4 rounded-lg hover:bg-[#e63946] transition-colors font-semibold"
+          >
+            Zobacz więcej artykułów
+          </Link>
+        </div>
       </div>
     );
   } catch (error) {

@@ -1,5 +1,3 @@
-"use server";
-
 import { InputsData } from "@/components/contactPage/contactUs/contactForm";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";

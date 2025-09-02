@@ -1,5 +1,4 @@
 "use server";
-import "server-only";
 
 import { Resend } from "resend";
 import { z } from "zod";

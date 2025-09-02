@@ -1,6 +1,4 @@
 "use server";
-
-import "server-only";
 import { cookies } from "next/headers";
 
 type TPage = "digital" | "finance";

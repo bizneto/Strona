@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -136,7 +136,7 @@ export default function PayrollServicePage() {
         header='Potrzebujesz obsługi kadr i płac?'
         text='Skontaktuj się z nami i przekaż obsługę kadrowo-płacową w profesjonalne ręce.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij współpracę'
         text='Zaufaj naszemu doświadczeniu w obsłudze kadr i płac i zapewnij swojej firmie profesjonalne wsparcie HR.'

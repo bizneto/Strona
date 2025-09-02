@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -136,7 +136,7 @@ export default function FinancialAuditServicePage() {
         header='Potrzebujesz audytu finansowego?'
         text='Skontaktuj się z naszymi audytorami i zapewnij swojej firmie profesjonalne badanie finansowe.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij audyt finansowy'
         text='Zaufaj naszym doświadczonym audytorom i uzyskaj obiektywną ocenę sytuacji finansowej swojej firmy.'

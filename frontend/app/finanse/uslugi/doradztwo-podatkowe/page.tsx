@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -136,7 +136,7 @@ export default function TaxAdvisoryServicePage() {
         header='Potrzebujesz optymalizacji podatkowej?'
         text='Skontaktuj się z naszym doradcą podatkowym i dowiedz się, jak możesz zaoszczędzić na podatkach.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij optymalizację podatkową'
         text='Zaufaj naszym doświadczonym doradcom podatkowym i zacznij oszczędzać na podatkach już dziś.'

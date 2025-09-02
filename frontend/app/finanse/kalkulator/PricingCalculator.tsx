@@ -47,21 +47,31 @@ export default function PricingCalculator() {
     let basePrice = 0;
     
     // Company type multiplier
-    const typeMultipliers = {
+    const typeMultipliers: Record<string, number> = {
       'sole-proprietorship': 1.0,
       'limited-company': 1.5,
       'partnership': 1.3,
       'corporation': 2.0,
+      'joint-stock-company': 2.0,
+      'simple-joint-stock': 1.8,
+      'general-partnership': 1.3,
+      'limited-partnership': 1.5,
+      'limited-joint-stock': 1.8,
+      'professional-partnership': 1.4,
+      'foundation': 1.6,
     };
-    
+
     basePrice = 300 * (typeMultipliers[data.companyType] || 1.0);
     
-    // Add services
-    if (data.services.includes('bookkeeping')) basePrice += 200;
-    if (data.services.includes('tax-advisory')) basePrice += 150;
-    if (data.services.includes('payroll')) basePrice += 100 * (data.employeeCount || 0);
-    if (data.services.includes('vat-returns')) basePrice += 100;
-    if (data.services.includes('annual-reports')) basePrice += 300;
+    // Add services based on boolean flags
+    if (data.needsTaxAdvisory) basePrice += 150;
+    if (data.needsBusinessConsulting) basePrice += 200;
+    if (data.needsFinancialAudit) basePrice += 300;
+    if (data.needsLegalSupport) basePrice += 250;
+
+    // Add employee-related costs
+    basePrice += 100 * (data.employeesContract || 0);
+    basePrice += 80 * (data.employeesCommission || 0);
     
     // Industry adjustment
     if (data.industry === 'construction' || data.industry === 'healthcare') {

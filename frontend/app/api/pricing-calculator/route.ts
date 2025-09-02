@@ -173,7 +173,7 @@ function calculateBasicPricing(data: CalculatorData): Omit<PricingResult, 'aiIns
   }
 
   // 8. Industry adjustments
-  const industryMultiplier = pricingConfig.industryMultipliers[data.industry] || 1.0;
+  const industryMultiplier = (pricingConfig.industryMultipliers as any)[data.industry] || 1.0;
   if (industryMultiplier !== 1.0) {
     const industryAdjustment = monthlyPrice * (industryMultiplier - 1);
     breakdown.push({

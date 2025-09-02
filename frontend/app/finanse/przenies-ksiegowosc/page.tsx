@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -140,7 +140,7 @@ export default function TransferBookkeepingServicePage() {
         header='Gotowy na zmianę biura rachunkowego?'
         text='Skontaktuj się z nami i bezpiecznie przenieś swoją księgowość do profesjonalnych rąk.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij współpracę z nami'
         text='Zaufaj naszemu doświadczeniu w przenoszeniu księgowości i ciesz się lepszą obsługą księgową.'

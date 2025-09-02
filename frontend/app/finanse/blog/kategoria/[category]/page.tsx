@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   try {
     // Get posts for this category
-    const posts = await blogAPI.getPostsByCategory(CATEGORY_MAPPING[category]);
+    const posts = await blogAPI.getPostsByCategory(CATEGORY_MAPPING[category] as any);
     const categoryName = CATEGORY_NAMES[category];
 
     return (

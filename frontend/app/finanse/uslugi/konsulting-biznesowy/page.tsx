@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/financePage/header";
 import ServiceDetail from "@/components/financePage/serviceDetail";
 import TextWithBackground from "@/components/financePage/textWithBackground";
-import FAQ from "@/components/financePage/faq";
+import FAQ from "@/components/offerItemPage/faq";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
@@ -136,7 +136,7 @@ export default function BusinessConsultingServicePage() {
         header='Potrzebujesz strategicznego doradztwa?'
         text='Skontaktuj się z naszym konsultantem biznesowym i opracuj strategię rozwoju swojej firmy.'
       />
-      <FAQ customFAQ={serviceData.faq} />
+      <FAQ FAQ={serviceData.faq.map(item => ({ Question: item.question, Answer: item.answer }))} />
       <TextWithBackground
         header='Rozpocznij transformację biznesową'
         text='Zaufaj naszemu doświadczeniu w konsultingu biznesowym i wyprowadź swoją firmę na nowy poziom.'
